@@ -1,53 +1,53 @@
 <script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content'
-import { mapContentNavigation } from '@nuxt/ui/utils/content'
-import { findPageBreadcrumb } from '@nuxt/content/utils'
+import type { ContentNavigationItem } from "@nuxt/content";
+import { findPageBreadcrumb } from "@nuxt/content/utils";
+import { mapContentNavigation } from "@nuxt/ui/utils/content";
 
-const route = useRoute()
+const route = useRoute();
 
 const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection('blog').path(route.path).first()
-)
-if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  queryCollection("blog").path(route.path).first());
+if (!page.value)
+  throw createError({ statusCode: 404, statusMessage: "Page not found", fatal: true });
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryCollectionItemSurroundings('blog', route.path, {
-    fields: ['description']
-  })
-)
+  queryCollectionItemSurroundings("blog", route.path, {
+    fields: ["description"],
+  }));
 
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
-const blogNavigation = computed(() => navigation.value.find(item => item.path === '/blog')?.children || [])
+const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
+const blogNavigation = computed(() => navigation.value.find(item => item.path === "/blog")?.children || []);
 
-const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(blogNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link))
+const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(blogNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link));
 
 if (page.value.image) {
-  defineOgImage({ url: page.value.image })
-} else {
-  defineOgImageComponent('Blog', {
-    headline: breadcrumb.value.map(item => item.label).join(' > ')
+  defineOgImage({ url: page.value.image });
+}
+else {
+  defineOgImageComponent("Blog", {
+    headline: breadcrumb.value.map(item => item.label).join(" > "),
   }, {
-    fonts: ['Geist:400', 'Geist:600']
-  })
+    fonts: ["Geist:400", "Geist:600"],
+  });
 }
 
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const title = page.value?.seo?.title || page.value?.title;
+const description = page.value?.seo?.description || page.value?.description;
 
 useSeoMeta({
   title,
   description,
   ogDescription: description,
-  ogTitle: title
-})
+  ogTitle: title,
+});
 
-const articleLink = computed(() => `${window?.location}`)
+const articleLink = computed(() => `${window?.location}`);
 
-const formatDate = (dateString: string) => {
-  return new Date(dateString).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  })
+function formatDate(dateString: string) {
+  return new Date(dateString).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 }
 </script>
 
