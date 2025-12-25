@@ -1,7 +1,8 @@
 {
   "name": "nuxt-ui-template-portfolio",
-  "private": true,
   "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -24,10 +25,12 @@
     "nuxt-og-image": "^5.1.13"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^6.7.3",
     "@nuxt/eslint": "^1.12.1",
     "eslint": "^9.39.2",
+    "eslint-plugin-format": "^1.1.0",
+    "prettier": "^3.7.1",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.1"
-  },
-  "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6"
+  }
 }
