@@ -1,120 +1,118 @@
 seo:
-  title: Emma Thompson - UX/UI Designer
-  description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
-title: "Hey, I'm Emma Thompson UX/UI Designer"
-description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
-hero:
-  links:
-    - label: Use this template
-      to: https://github.com/nuxt-ui-templates/portfolio
-      color: neutral
-  images:
-    - src: /hero/random-1.avif
-      alt: Random Image 1
-    - src: /hero/random-2.avif
-      alt: Random Image 2
-    - src: /hero/random-3.avif
-      alt: Random Image 3
-    - src: /hero/random-4.avif
-      alt: Random Image 4
-    - src: /hero/random-5.avif
-      alt: Random Image 5
-    - src: /hero/random-6.avif
-      alt: Random Image 6
-    - src: /hero/random-7.avif
-      alt: Random Image 7
-    - src: /hero/random-8.avif
-      alt: Random Image 8
-    - src: /hero/random-9.avif
-      alt: Random Image 9
+  title: Ersan Karimi - Front-End Developer
+  description: "Welcome to my portfolio! I'm Ersan Karimi, a front-end developer based in Balikpapan, Indonesia. I build clean, responsive websites and web apps with a strong focus on user experience, performance, and maintainable UI."
+title: "Hey, I'm Ersan Karimi Front-End Developer"
+description: "I build modern web experiences that feel fast, polished, and easy to use. Based in Balikpapan, Indonesia — open to collaborations and new projects."
+
+# About
 about:
   title: About Me
   description: |
-    As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
-    My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
+    I'm Ersan Karimi, a front-end developer with ~3 years of professional experience. I build responsive, user-friendly web experiences with a focus on clarity, performance, and clean UI.
+
+    I've delivered work across in-house and freelance projects, and I'm currently building Anggun Praya end-to-end—turning ideas into a polished product and consistent user experience.
+
+  links:
+    - label: More About Me
+      href: /about
+      size: md
+      color: neutral
+      variant: ghost
+      class: "px-0 hover:underline hover:bg-transparent"
+      trailing-icon: i-lucide-arrow-right
+      ui:
+        label: hover:underline
+
+# Work Experience
 experience:
   title: Work Experience
   items:
-    - position: Brand Designer at
+    - position: Founder & Developer
+      date: 2024 - Present
+      company:
+        slug: anggunpraya
+        name: Anggun Praya
+        logo: /logo-anggunpraya.webp
+        url: https://anggunpraya.id
+        color-light: "#914e17"
+        color-dark: "#f59e0b"
+    - position: Front-End Developer
       date: 2023 - Present
       company:
-        name: Nuxt
-        logo: i-simple-icons-nuxtdotjs
-        url: "https://nuxt.com"
-        color: "#00DC82"
-    - position: Assets Designer at
-      date: 2022 - 2023
-      company:
-        name: Raycast
-        logo: i-simple-icons-raycast
-        url: "https://raycast.com"
-        color: "#FF6363"
-    - position: Senior UX/UI Designer at
-      date: 2020 - 2021
-      company:
-        name: Linear
-        logo: i-simple-icons-linear
-        url: "https://linear.app"
-        color: "#5E6AD2"
-testimonials:
-  - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
-    author:
-      name: Sarah Chen
-      description: Product Director at Bloom Finance
-      avatar:
-        src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
-        srcset: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
-  - quote: "Working with Emma was the best decision we made for our startup. She didn't just deliver designs—she challenged our assumptions, conducted thorough user research, and created an experience that truly resonated with our audience. Her technical knowledge of front-end development meant the handoff to our engineering team was seamless."
-    author:
-      name: Michael Rodriguez
-      description: Co-founder of Wavelength Music
-      avatar:
-        src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
-        srcset: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
-  - quote: "Emma stands out in her ability to translate complex sustainability data into intuitive interfaces. Her work on EcoTrack wasn't just visually stunning—it fundamentally changed how our users interact with environmental information. She approaches each problem with both creativity and analytical rigor, which is exactly what we needed."
-    author:
-      name: Dr. Aisha Johnson
-      description: Chief Innovation Officer at GreenTech Solutions
-      avatar:
-        src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
-        srcset: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
-blog:
-  title: Latest Articles
-  description: Some of my recent thoughts
+        slug: elemesgroup
+        name: Elemes Group
+        logo: /logo-elemes.webp
+        url: https://elemesgroup.com
+        color-light: "#1d4fd8"
+        color-dark: "#3b82f6"
+
+# FAQ
 faq:
   title: Frequently Asked Questions
-  description: Answers to common questions about my process and services.
+  description: Quick answers about how I work and what you can expect.
   categories:
     - title: Services & Process
       questions:
         - label: What services do you offer?
           content: |
-            I specialize in UX/UI design and front-end development. This includes user research, wireframing, interactive prototyping, creating intuitive user interfaces, building responsive websites and web applications (especially with Vue.js/Nuxt.js), and developing design systems. My goal is to create seamless digital experiences from concept to deployment.
-        - label: What is your design process like?
+            I help clients build and improve web experiences—landing pages, marketing sites, and web app interfaces. I can work end-to-end (planning → UI build → QA) or jump in to support an existing team.
+        - label: What is your process like?
           content: |
-            My process is collaborative and iterative, typically involving stages like Discovery & Research, Ideation & Prototyping, User Testing, Visual Design, and close collaboration with development teams during implementation. I tailor the process based on project needs, always focusing on user-centered solutions.
-        - label: Do you work with startups?
+            I start by clarifying goals and scope, then break work into clear milestones. I share progress early, iterate fast from feedback, and focus on shipping a polished, reliable result.
+        - label: What kind of projects do you usually work on?
           content: |
-            Absolutely! I enjoy working with startups to help shape their product vision and create user-friendly interfaces from the ground up. I can adapt my process to fit the fast-paced startup environment.
+            Mostly product dashboards, internal tools, and marketing websites. I'm especially comfortable turning UI requirements into clean, responsive screens that feel consistent and easy to use.
+        - label: Do you work with startups or small teams?
+          content: |
+            Yes. I'm comfortable working with startups and lean teams, especially when you need someone who can move quickly, communicate clearly, and take ownership.
+        - label: Can you work with an existing design or codebase?
+          content: |
+            Definitely. I can implement from Figma/design references, improve an existing UI, refactor for maintainability, or help stabilize and polish a product before release.
+        - label: Do you handle both design and development?
+          content: |
+            I focus on front-end development. If you already have a design (Figma), I can implement it precisely. If not, I can help with simple UI direction and collaborate with a designer for more complex work.
+        - label: How do you handle NDA or private projects?
+          content: |
+            I respect confidentiality. I don't share sensitive details publicly—case study details, demos, or screenshots can be discussed privately if needed.
+
+    - title: Tech & Quality
+      questions:
+        - label: What technologies do you usually use?
+          content: |
+            I mainly work with Nuxt/Vue and TypeScript, with Tailwind CSS for styling. I'm also comfortable with React/Next.js depending on the project. For UI quality, I focus on responsive layout, clean component structure, and performance.
+        - label: Can you improve performance and polish an existing UI?
+          content: |
+            Yes. I can help with UI cleanup, responsive fixes, component refactors, and performance improvements—especially on pages that feel slow or inconsistent.
+        - label: Do you use component libraries?
+          content: |
+            Yes when it makes sense. I often work with Nuxt UI and other practical UI building blocks, while keeping the design consistent with your brand.
+
     - title: Pricing & Timelines
       questions:
         - label: How much does a project typically cost?
           content: |
-            Project costs vary based on scope, complexity, features, and timeline. For comprehensive UX/UI design and front-end development projects, my engagements typically start around $5,000, with average projects ranging between $8,000 and $25,000. For consulting or specific design tasks, my day rate is $700.
+            It depends on scope, complexity, and timeline. After a short brief, I'll send a clear quote with deliverables and milestones—no vague surprises.
         - label: What are your payment terms?
           content: |
-            I generally require a 40% deposit to schedule the project and begin work, with the remaining 60% due upon successful project completion and delivery. I accept payments via bank transfer and Stripe.
+            For fixed-scope projects, I usually use milestone-based payments (e.g., upfront to start, then the rest per milestone). For ongoing work, monthly billing is available.
         - label: How long does a typical project take?
           content: |
-            Timelines depend heavily on the project's scope and complexity. Smaller projects might take 3-4 weeks, while larger, more involved projects can range from 2 to 4 months. I always provide a detailed timeline estimate after the initial discovery phase.
-        - label: Do you offer retainers or ongoing support?
+            Small tasks can take a few days. A landing page often takes 1-2 weeks, while larger UI work may take several weeks depending on scope and feedback cycles.
+        - label: Do you offer ongoing support?
           content: |
-            Yes, for clients needing ongoing design support, feature development, or maintenance, I offer monthly retainer options tailored to specific needs. Let's discuss if this is something you're interested in.
-    - title: About Me
+            Yes. I can provide ongoing maintenance, UI improvements, and feature support on a retainer or part-time basis.
+
+    - title: Collaboration
       questions:
-        - label: What do you enjoy most about your work?
+        - label: What do you need from me to start?
           content: |
-            I love the challenge of solving complex problems through design and technology. It's incredibly rewarding to see people interact with something I've created and find it genuinely useful and easy to navigate. Bridging the gap between user needs and technical possibilities is what truly excites me.
-        - label: What are your hobbies outside of work?
+            A short brief: goals, target users, references, required pages/features, and any existing design/brand assets. If you have none, we can keep it simple and define them together.
+        - label: How do you communicate and share progress?
           content: |
-            When I'm not designing or coding, I enjoy exploring Boston's neighborhoods, trying out new coffee shops, and hiking in the nearby reservations. I'm also passionate about photography and occasionally contribute to open-source projects.
+            I share updates regularly via chat and short check-ins, and I keep tasks tracked so priorities and status are always clear.
+        - label: What makes your work style different?
+          content: |
+            I care about details that users feel—clarity, consistency, and speed. I aim to ship clean UI that's easy to maintain and ready for real-world use.
+        - label: Are you open to remote work?
+          content: |
+            Yes. I'm open to remote collaborations and flexible setups depending on the project needs.
