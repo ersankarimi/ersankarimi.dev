@@ -25,7 +25,3 @@ const props = defineProps<{
     </template>
   </UPageSection>
 </template>
-
-<style scoped>
-
-</style>
