@@ -54,16 +54,20 @@ export default defineContentConfig({
           links: z.array(createButtonSchema()),
           images: z.array(createImageSchema()),
         }),
-        about: createBaseSchema(),
+        about: createBaseSchema().extend({
+          links: z.array(createButtonSchema()),
+        }),
         experience: createBaseSchema().extend({
           items: z.array(z.object({
             date: z.date(),
             position: z.string(),
             company: z.object({
-              name: z.string(),
-              url: z.string(),
-              logo: z.string().editor({ input: "icon" }),
-              color: z.string(),
+              "name": z.string(),
+              "url": z.string(),
+              "logo": z.string().editor({ input: "icon" }),
+              "slug": z.string(),
+              "color-dark": z.string(),
+              "color-light": z.string(),
             }),
           })),
         }),
