@@ -3,23 +3,62 @@
 
 @source "../../../content/**/*";
 
+:root {
+  --ui-container: var(--container-4xl);
+
+  /*
+  * Uncomment and override these variables to customize the design system.
+  * https://ui.nuxt.com/getting-started/theme#neutral
+  */
+  --ui-text-toned: var(--ui-color-neutral-800);
+  --ui-text: var(--ui-color-neutral-950);
+}
+
+.dark {
+  /*
+  * Uncomment and override these variables to customize the design system.
+  * https://ui.nuxt.com/getting-started/theme#neutral
+  */
+  --ui-text-muted: var(--ui-color-neutral-300);
+  --ui-text: var(--ui-color-neutral-50);
+
+  ::selection {
+    color: #ffffff;
+    background-color: #474747;
+  }
+}
+
 @theme static {
   --font-sans: "Public Sans", sans-serif;
   --font-serif: "Instrument Serif", serif;
+
+  --color-lavender-50: #fdfaff;
+  --color-lavender-100: #fcf5ff;
+  --color-lavender-200: #f6e6ff;
+  --color-lavender-300: #ecd4fc;
+  --color-lavender-400: #d8b3fc;
+  --color-lavender-500: #bd93f9;
+  --color-lavender-600: #a177e0;
+  --color-lavender-700: #7852ba;
+  --color-lavender-800: #553596;
+  --color-lavender-900: #371e70;
+  --color-lavender-950: #1c0c47;
 }
 
-:root {
-  --ui-container: var(--container-4xl);
+@layer base {
 
   ::selection {
     color: #282a30;
     background-color: #c8c8c8;
   }
-}
 
-.dark {
-  ::selection {
-    color: #ffffff;
-    background-color: #474747;
+  /* https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
