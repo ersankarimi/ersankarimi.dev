@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { MOTION_OPTIONS } from "~/constants";
+
 const { data: page } = await useAsyncData("index", () => {
   return queryCollection("index").first();
 });
+
 if (!page.value) {
   throw createError({
     statusCode: 404,
@@ -20,17 +23,42 @@ useSeoMeta({
 
 <template>
   <UPage v-if="page">
-    <LandingHero :page />
+    <PLandingHero :page="page" />
+
     <UPageSection
       :ui="{
-        container: '!pt-0 lg:grid lg:grid-cols-2 lg:gap-8',
+        container: 'pt-0! flex flex-col gap-16',
       }"
     >
-      <LandingAbout :page />
-      <LandingWorkExperience :page />
+      <Motion
+        v-bind="MOTION_OPTIONS"
+        :transition="{
+          duration: 0.6,
+          delay: 0.1,
+        }"
+      >
+        <PLandingAbout :page="page" />
+      </Motion>
+
+      <Motion
+        v-bind="MOTION_OPTIONS"
+        :transition="{
+          duration: 0.6,
+          delay: 0.25,
+        }"
+      >
+        <PLandingWorkExperience :page="page" />
+      </Motion>
     </UPageSection>
-    <LandingBlog :page />
-    <LandingTestimonials :page />
-    <LandingFAQ :page />
+
+    <Motion
+      v-bind="MOTION_OPTIONS"
+      :transition="{
+        duration: 0.6,
+        delay: 0.4,
+      }"
+    >
+      <PLandingFAQ :page="page" />
+    </Motion>
   </UPage>
 </template>
