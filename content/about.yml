@@ -1,27 +1,37 @@
 title: About Me
-description: Learn more about my journey as a Boston-based UX/UI Designer & Front-End Developer, my design philosophy, and my passion for crafting intuitive digital experiences.
+description: Learn more about my journey as a Front-End Developer, what I'm building with Anggun Praya, and what I enjoy outside of work.
 content: |
-  Hi, I'm **Emma Thompson**, a UX/UI Designer and Front-End Developer based right here in Boston. For the past six years, I've been immersed in the world of digital product creation, focusing on building experiences that are not just functional, but genuinely intuitive and engaging for users.
+  Hi, I'm **Ersan Karimi** — a Front-End Developer based in **Balikpapan, Indonesia**.&nbsp;
 
-  My path started at **Boston University**, where I earned a degree in Interactive Design. It was there I discovered my dual passion for the visual language of design and the logical puzzle of code. Since then, I've honed my skills in both areas, believing that the best digital products are born from a deep understanding of both aesthetics and implementation.
+  I have **~3 years of professional experience**, working across in-house teams and freelance projects. I enjoy building web experiences that feel **fast, clear, and polished**, with UI that's easy to use and easy to maintain.&nbsp;
 
-  ### My Design Philosophy
+  In my day-to-day work, I've contributed across the full development lifecycle—shipping features from design implementation to deployment, collaborating with cross-functional teams, and continuously improving performance and user experience.
 
-  My design philosophy is rooted in **empathy** and **problem-solving**. I believe great design starts with understanding the 'why' – the user's needs, motivations, and pain points. I use research, iterative prototyping (often with tools like Figma), and user testing to ensure the solutions I build are truly effective.
+  ### What I'm Building
+  I'm currently building **Anggun Praya**, a digital wedding invitation product for Indonesian couples. I take care of it end-to-end—shaping the experience, building the website and templates, collaborating with designers/developers when needed, and making sure everything stays consistent and easy to use.
 
-  I strive to create interfaces that feel effortless, where functionality and beauty work hand-in-hand. Whether I'm crafting pixel-perfect UIs or writing clean Vue.js/Nuxt.js code, my focus is always on creating value for the end-user.
+  - **Visit Anggun Praya:** https://anggunpraya.id
 
-  ### What Drives Me
+  ### How I Work
+  I like clear milestones, quick feedback loops, and practical solutions. Whether it's a new build or an existing codebase, I focus on details users feel—responsiveness, UI states, consistency, and performance.
 
-  What keeps me excited about this work is the constant learning and the challenge of translating complex ideas into simple, elegant solutions. There's nothing more rewarding than seeing a design come to life and knowing it's making someone's digital interaction easier or more enjoyable.
+  ### Tools I Often Use
+  I'm comfortable working with modern Front-End stacks and workflows—TypeScript, clean component architecture, Tailwind-style utility UI, Git-based collaboration, and REST API integrations.
 
-  ### Beyond the Screen
+  ### Content & Side Projects
+  I also share what I learn on YouTube:
 
-  When I'm not designing or coding, you might find me exploring Boston's latest coffee shops, hiking nearby trails, or occasionally contributing to open-source projects.
+  - **Haji Koding:** https://www.youtube.com/@HajiKoding
 
-  Thanks for stopping by. Feel free to browse my [projects](/projects) or [get in touch](/#contact) if you'd like to collaborate!
-images:
-  - src: https://images.unsplash.com/photo-1744877478622-a78c7a3336f6?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My coffee workspace
-  - src: https://images.unsplash.com/photo-1744429523595-2c06b8611242?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My trip to Tokyo
+  For fun, I keep a small project to track my workout program:
+
+  - **Ersan Body Project:** https://ersankarimi.github.io/ersan-bodyproject
+
+  ### Beyond Work
+  Outside of coding, I enjoy **sports** (basketball, football/soccer, gym/strength training, and running), **fishing**, and **reading**.
+
+  ### Looking For
+  I'm currently looking for **Front-End roles**, and I'm also open to freelance collaborations when it's a good fit.&nbsp;
+
+  The best way to reach me is via **email** or **LinkedIn**.
+  Feel free to explore my [experience](/experience) or [get in touch](/#contact).
