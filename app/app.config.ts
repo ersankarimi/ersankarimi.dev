@@ -10,7 +10,7 @@ export default defineAppConfig({
   },
   ui: {
     colors: {
-      primary: "lavender",
+      primary: "violet",
       neutral: "neutral",
     },
     pageHero: {
