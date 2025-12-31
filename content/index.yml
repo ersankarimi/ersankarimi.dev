@@ -23,29 +23,6 @@ about:
       ui:
         label: hover:underline
 
-# Work Experience
-experience:
-  title: Work Experience
-  items:
-    - position: Building Anggun Praya
-      date: 2024 - Present
-      company:
-        slug: anggunpraya
-        name: Anggun Praya
-        logo: /logo-anggunpraya.webp
-        url: https://anggunpraya.id
-        color-light: "#914e17"
-        color-dark: "#f59e0b"
-    - position: Front-End Developer
-      date: 2023 - Present
-      company:
-        slug: elemesgroup
-        name: Elemes Group
-        logo: /logo-elemes.webp
-        url: https://elemesgroup.com
-        color-light: "#1d4fd8"
-        color-dark: "#3b82f6"
-
 # FAQ
 faq:
   title: Frequently Asked Questions
@@ -116,3 +93,88 @@ faq:
         - label: Are you open to remote work?
           content: |
             Yes. I'm open to remote roles and flexible collaboration setups.
+
+# Work Experience (Accordion / LinkedIn-style)
+experience:
+  title: Work Experience
+  description: "A quick timeline of what I've been working on—client projects, product building, and continuous improvements."
+  items:
+    - slug: anggunpraya
+      label: Anggun Praya
+      headline: Founder & Developer · Oct 2024 — Present
+      subheadline: Personal product · Remote (Balikpapan)
+      company:
+        slug: anggunpraya
+        name: Anggun Praya
+        logo: /logo-anggunpraya.png
+        url: https://anggunpraya.id
+        color-light: "#914e17"
+        color-dark: "#f59e0b"
+      summary: |
+        A digital wedding invitation brand I'm building for Indonesian couples—focused on elegant, modern, and easy-to-use invitations that couples can customize and share with their guests.
+      roles:
+        - title: Building Anggun Praya
+          period: Oct 2024 — Present
+          meta: Remote · Balikpapan
+          description: |
+            I'm building Anggun Praya step by step—turning ideas into a clean, consistent product experience. I'm hands-on across product direction, UI implementation, and improving the quality as the product grows.
+          highlights:
+            - Build the website and invitation template experience
+            - Improve UX details (clarity, sections, responsiveness, UI states)
+            - Set up basics like analytics and practical release workflows
+            - Support early growth through content direction and customer conversations
+          links:
+            - label: Website
+              url: https://anggunpraya.id
+            - label: Instagram
+              url: https://instagram.com/anggunpraya
+            - label: TikTok
+              url: https://www.tiktok.com/@anggunpraya.id
+
+    - slug: elemesgroup
+      label: Elemes Group
+      headline: Front-End Developer · Jun 2023 — Present
+      subheadline: Software Development · Remote & On-site (Tangerang Selatan)
+      company:
+        slug: elemesgroup
+        name: Elemes Group
+        logo: /logo-elemesgroup.avif
+        url: https://elemesgroup.com
+        color-light: "#1d4fd8"
+        color-dark: "#3b82f6"
+      summary: |
+        Front-end role in a software development team delivering client projects.
+        I focus on building clean, responsive UI, shipping features reliably, and improving product quality through iterations.
+      roles:
+        - title: Front-End Developer (Part-time)
+          period: Feb 2025 — Present
+          meta: Remote
+          description: |
+            Supporting ongoing client projects by maintaining web apps and shipping selected improvements.
+            Most of my work here is about polishing UI, fixing edge cases, and keeping the experience consistent across screens.
+          highlights:
+            - Maintain and improve existing UI/flows
+            - Ship refinements based on priorities and feedback
+            - Strengthen consistency (UI states, edge cases, responsiveness)
+
+        - title: Front-End Developer (Contract)
+          period: Nov 2023 — Feb 2025
+          meta: On-site · Tangerang Selatan
+          description: |
+            Worked on multiple client-facing web apps, taking features from design handoff to release.
+            This role helped me build good habits around iteration: ship, collect feedback, fix issues, and keep improving the UI quality.
+          highlights:
+            - Deliver UI features end-to-end (implement → iterate → release)
+            - Handle bug fixes and UI improvements across screens and flows
+            - Collaborate with QA/PM/backend to deliver reliably
+
+        - title: Front-End Developer (Internship)
+          period: Jun 2023 — Nov 2023
+          meta: On-site · Tangerang Selatan
+          description: |
+            My starting point in a real production environment.
+            I helped implement UI components, learned team workflows, and got used to shipping with real constraints and timelines.
+          highlights:
+            - Implement UI from existing designs
+            - Build reusable components and keep layout consistent
+            - Learn delivery workflow, reviews, and iteration habits
