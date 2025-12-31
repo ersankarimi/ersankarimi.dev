@@ -18,6 +18,7 @@
     "@nuxt/content": "^3.10.0",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.3.0",
+    "@nuxtjs/seo": "3.3.0",
     "@vueuse/nuxt": "^14.1.0",
     "better-sqlite3": "^12.5.0",
     "motion-v": "^1.7.3",
@@ -32,11 +33,5 @@
     "prettier": "^3.7.1",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.1"
-  },
-  "pnpm": {
-    "overrides": {
-      "@tiptap/core": "^3.14.0",
-      "@tiptap/pm": "^3.14.0"
-    }
   }
 }
