@@ -2,10 +2,10 @@ export default defineAppConfig({
   global: {
     picture: {
       src: "/profile.jpg",
-      alt: "My profile picture",
+      alt: "Ersan Profile Picture",
     },
-    meetingLink: "https://cal.com/",
-    email: "ui-pro@nuxt.com",
+    meetingLink: "https://calendly.com/ersankarimi-dev/30min",
+    email: "ersankarimi.dev@gmail.com",
     available: true,
   },
   ui: {
