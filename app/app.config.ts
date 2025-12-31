@@ -1,7 +1,7 @@
 export default defineAppConfig({
   global: {
     picture: {
-      src: "/profile.webp",
+      src: "/profile.jpg",
       alt: "My profile picture",
     },
     meetingLink: "https://cal.com/",
