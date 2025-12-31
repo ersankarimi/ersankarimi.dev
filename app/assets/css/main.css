@@ -31,13 +31,12 @@
 }
 
 @theme static {
-    /* Custom Breakpoints */
+  /* Custom Breakpoints */
   --breakpoint-xs: 24rem; /* 384px */
   --breakpoint-xsUp: 32rem; /* 512px */
   --breakpoint-mdUp: 56rem; /* 896px */
   --breakpoint-custom: 106.25rem; /* 1700px */
   --breakpoint-3xl: 120rem; /* 1920px */
-
 
   --font-sans: "Public Sans", sans-serif;
   --font-serif: "Instrument Serif", serif;
@@ -56,7 +55,6 @@
 }
 
 @layer base {
-
   ::selection {
     color: #282a30;
     background-color: #c8c8c8;
