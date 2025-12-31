@@ -47,7 +47,6 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxt/content",
     "@vueuse/nuxt",
-    "nuxt-og-image",
     "motion-v/nuxt",
   ],
 
