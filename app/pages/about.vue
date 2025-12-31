@@ -18,6 +18,17 @@ useSeoMeta({
   description: page.value?.seo?.description || page.value?.description,
   ogDescription: page.value?.seo?.description || page.value?.description,
 });
+
+defineOgImageComponent("PortfolioDracula", {
+  name: "Ersan Karimi",
+  role: "About Me",
+  tagline:
+    "How I work, what I'm building, and a bit of life outside the screen.",
+  location: "Balikpapan, Indonesia",
+  website: "ersankarimi.dev/about",
+  photo: "https://avatars.githubusercontent.com/u/73420137?v=4",
+  accent: "#BD93F9",
+});
 </script>
 
 <template>
@@ -38,7 +49,7 @@ useSeoMeta({
       >
         <NuxtImg
           class="size-36 rounded-lg ring ring-default ring-offset-3 ring-offset-bg object-cover"
-          src="/profile.webp"
+          src="/profile.jpg"
           alt="Profile Picture"
           placeholder
           deconding="async"
