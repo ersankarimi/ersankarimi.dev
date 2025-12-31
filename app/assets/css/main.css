@@ -2,6 +2,7 @@
 @import "@nuxt/ui";
 
 @source "../../../content/**/*";
+@plugin "@tailwindcss/typography";
 
 :root {
   --ui-container: var(--container-4xl);
@@ -10,7 +11,7 @@
   * Uncomment and override these variables to customize the design system.
   * https://ui.nuxt.com/getting-started/theme#neutral
   */
-  --ui-text-toned: var(--ui-color-neutral-800);
+  --ui-text-toned: var(--ui-color-neutral-700);
   --ui-text: var(--ui-color-neutral-950);
 }
 
@@ -21,6 +22,7 @@
   */
   --ui-text-muted: var(--ui-color-neutral-300);
   --ui-text: var(--ui-color-neutral-50);
+  --ui-text-toned: var(--ui-color-neutral-200);
 
   ::selection {
     color: #ffffff;
