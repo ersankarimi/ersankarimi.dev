@@ -103,6 +103,10 @@ export default defineNuxtConfig({
     ],
   },
 
+  image: {
+    provider: "ipx",
+  },
+
   nitro: {
     prerender: {
       routes: ["/"],
