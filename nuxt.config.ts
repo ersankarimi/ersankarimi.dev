@@ -39,16 +39,13 @@ export default defineNuxtConfig({
       path: "~/components/partials",
       prefix: "P",
     },
+    {
+      path: "~/components/OgImage",
+      prefix: "OgImage",
+    },
   ],
 
-  modules: [
-    "@nuxt/eslint",
-    "@nuxt/image",
-    "@nuxt/ui",
-    "@nuxt/content",
-    "@vueuse/nuxt",
-    "motion-v/nuxt",
-  ],
+  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@nuxt/content", "@vueuse/nuxt", "motion-v/nuxt", "@nuxtjs/seo"],
 
   eslint: {
     config: {
@@ -110,6 +107,59 @@ export default defineNuxtConfig({
     prerender: {
       routes: ["/"],
       crawlLinks: true,
+    },
+  },
+
+  site: {
+    indexable: import.meta.dev,
+    debug: import.meta.dev,
+    name: import.meta.env.NUXT_SITE_NAME,
+    url: import.meta.env.NUXT_SITE_URL,
+    env: import.meta.env.NUXT_SITE_ENV,
+  },
+
+  robots: {
+    credits: true,
+  },
+
+  ogImage: {
+    enabled: true,
+  },
+
+  schemaOrg: {
+    enabled: false,
+  },
+
+  sitemap: {
+    enabled: true,
+  },
+
+  seo: {
+    meta: {
+      // Basic SEO
+      description: "Welcome to my personal website where I share my projects and blog posts about front-end development.",
+      author: "Ersan Karimi",
+
+      // Theme & Color
+      themeColor: [
+        { content: "#18181b", media: "(prefers-color-scheme: dark)" },
+        { content: "white", media: "(prefers-color-scheme: light)" },
+      ],
+      colorScheme: "dark light",
+
+      // Social Media
+      twitterCreator: "@ersankarimii",
+      twitterSite: "@ersankarimii",
+
+      // App Info
+      applicationName: "Ersan Karimi",
+
+      // Nuxt SEO Utils already sets the below tags for you
+      ogSiteName: "Ersan Karimi",
+      ogLocale: "en_US",
+      ogType: "website",
+      ogUrl: "https://ersankarimi.vercell.app",
+      ogTitle: "Ersan Karimi - Front-End Developer",
     },
   },
 });
