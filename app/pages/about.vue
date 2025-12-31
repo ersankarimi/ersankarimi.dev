@@ -12,8 +12,6 @@ if (!page.value) {
   });
 }
 
-// const { global } = useAppConfig();
-
 useSeoMeta({
   title: page.value?.seo?.title || page.value?.title,
   ogTitle: page.value?.seo?.title || page.value?.title,
@@ -71,14 +69,6 @@ useSeoMeta({
           unwrap="p"
           :value="page.content"
         />
-      <!-- <div class="flex flex-row justify-center items-center py-10 -space-x-8">
-        <AppPolaroidItem
-          v-for="(image, index) in page.images"
-          :key="index"
-          :image="image"
-          :index
-        />
-      </div> -->
       </UPageSection>
     </Motion>
   </UPage>
