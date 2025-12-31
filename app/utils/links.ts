@@ -6,11 +6,11 @@ export const navLinks: NavigationMenuItem[] = [
     icon: "i-lucide-home",
     to: "/",
   },
-  {
-    label: "Experience",
-    icon: "i-lucide-briefcase",
-    to: "/experience",
-  },
+  // {
+  //   label: "Experience",
+  //   icon: "i-lucide-briefcase",
+  //   to: "/experience",
+  // },
   {
     label: "About",
     icon: "i-lucide-user",
