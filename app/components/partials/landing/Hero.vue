@@ -35,7 +35,7 @@ const { footer, global } = useAppConfig();
       >
         <NuxtImg
           class="size-32 ring ring-default ring-offset-3 ring-offset-bg object-cover rounded-full"
-          src="/profile.webp"
+          src="/profile.jpg"
           alt="Ersan Karimi - Profile"
           placeholder
         />
