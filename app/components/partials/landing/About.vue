@@ -12,7 +12,7 @@ const props = defineProps<{
     :links="props.page.about.links"
     :ui="{
       container: 'p-0!',
-      title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
+      title: 'text-left text-xl sm:text-xl lg:text-2xl font-semibold',
       description: 'text-muted text-left text-pretty mt-3 text-sm sm:text-base',
       links: 'justify-start',
       footer: 'mt-4',
