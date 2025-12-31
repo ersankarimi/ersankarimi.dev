@@ -14,15 +14,14 @@
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.82",
-    "@iconify-json/simple-icons": "^1.2.63",
-    "@nuxt/content": "^3.9.0",
+    "@iconify-json/simple-icons": "^1.2.64",
+    "@nuxt/content": "^3.10.0",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.3.0",
     "@vueuse/nuxt": "^14.1.0",
     "better-sqlite3": "^12.5.0",
     "motion-v": "^1.7.3",
-    "nuxt": "^4.2.2",
-    "nuxt-og-image": "^5.1.13"
+    "nuxt": "^4.2.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.7.3",
@@ -33,5 +32,11 @@
     "prettier": "^3.7.1",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "@tiptap/core": "^3.14.0",
+      "@tiptap/pm": "^3.14.0"
+    }
   }
 }
