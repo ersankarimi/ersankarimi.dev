@@ -8,3 +8,7 @@ ignoredBuiltDependencies:
 onlyBuiltDependencies:
   - better-sqlite3
   - sharp
+
+overrides:
+  "@tiptap/core": "^3.14.0"
+  "@tiptap/pm": "^3.14.0"

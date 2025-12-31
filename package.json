@@ -7,26 +7,27 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare && pnpm rebuild better-sqlite3",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.82",
-    "@iconify-json/simple-icons": "^1.2.63",
-    "@nuxt/content": "^3.9.0",
+    "@iconify-json/simple-icons": "^1.2.64",
+    "@nuxt/content": "^3.10.0",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.3.0",
+    "@nuxtjs/seo": "3.3.0",
     "@vueuse/nuxt": "^14.1.0",
     "better-sqlite3": "^12.5.0",
     "motion-v": "^1.7.3",
-    "nuxt": "^4.2.2",
-    "nuxt-og-image": "^5.1.13"
+    "nuxt": "^4.2.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.7.3",
     "@nuxt/eslint": "^1.12.1",
+    "@tailwindcss/typography": "^0.5.19",
     "eslint": "^9.39.2",
     "eslint-plugin-format": "^1.1.0",
     "prettier": "^3.7.1",
