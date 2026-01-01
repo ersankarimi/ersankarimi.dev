@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.1](https://github.com-ersankarimi/ersankarimi/ersankarimi/compare/v1.0.0...v1.0.1) (2026-01-01)
+
+### Bug Fixes
+
+* adjust container padding in UPageSection ([9fdb945](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/9fdb94547fd6abbe8f70ce4d5805da2082430361))
+
 ## 1.0.0 (2026-01-01)
 
 ### Features
