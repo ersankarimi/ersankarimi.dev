@@ -24,7 +24,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "nuxt typecheck",
-    "relase": "release-it"
+    "release": "release-it"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.82",
