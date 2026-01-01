@@ -45,7 +45,7 @@ Install dependencies:
 
 ```bash
 pnpm install
-````
+```
 
 Run development server:
 
@@ -55,7 +55,7 @@ pnpm dev
 
 Open:
 
-* `http://localhost:3000`
+- `http://localhost:3000`
 
 ---
 
@@ -96,7 +96,7 @@ content/
 
 This repo uses a custom OG image template:
 
-* `components/OgImage/PortfolioDracula.vue`
+- `components/OgImage/PortfolioDracula.vue`
 
 You can set OG image per page using:
 
@@ -109,7 +109,7 @@ defineOgImageComponent("PortfolioDracula", {
   website: "ersankarimi.dev",
   photo: "https://avatars.githubusercontent.com/u/73420137?v=4",
   accent: "#BD93F9",
-})
+});
 ```
 
 ---
