@@ -38,7 +38,7 @@ const accordionItems = computed<ExperienceAccordionItem[]>(() => {
             trigger: 'mb-2 border-0 group px-4 transform-gpu rounded-lg bg-elevated/60 will-change-transform hover:bg-muted/50 text-base',
           }"
         >
-          <template #default="{ item, index }">
+          <template #default="{ item: { experience }, index }">
             <Motion
               :key="index"
               class="text-muted flex items-center text-nowrap gap-2"
@@ -47,45 +47,65 @@ const accordionItems = computed<ExperienceAccordionItem[]>(() => {
               :transition="{ delay: 0.6 + 0.2 * index }"
               :in-view-options="{ once: true }"
             >
-              <div class="flex gap-3">
+              <div class="flex flex-col gap-2 sm:flex-row sm:gap-3 md:gap-4">
                 <NuxtImg
-                  :src="item.experience.company.logo"
-                  :alt="item.experience.company.name"
+                  :src="experience.company.logo"
+                  :alt="experience.company.name"
                   class="size-8 rounded-md object-contain sm:size-10"
                   placeholder
                   decoding="async"
                 />
 
-                <div class="flex min-w-0 flex-col gap-0.5 text-default">
-                  <p class="text-xs md:text-sm text-toned truncate">
-                    {{ item.experience.company.name }}
+                <!-- For under sm screens -->
+                <div class="flex flex-col text-default xsUp:hidden">
+                  <p class="text-xs text-toned whitespace-pre-wrap md:text-sm">
+                    {{ experience.company.name }}
                   </p>
 
-                  <h5 class="font-semibold text-sm md:text-base leading-snug truncate">
-                    {{ item.experience.headline }}
+                  <h5 class="font-semibold text-sm md:text-base leading-snug">
+                    {{ experience.role }}
                   </h5>
 
-                  <p class="text-toned text-xs md:text-sm leading-snug truncate">
-                    {{ item.experience.subheadline }}
+                  <h5 class="text-toned text-xs leading-snug whitespace-pre-wrap mt-0.5 md:text-sm">
+                    <span class="hidden xs:inline">{{ experience.employmentType }} &bull;&nbsp;</span>{{ experience.period }}
+                  </h5>
+
+                  <p class="text-toned text-xs leading-snug whitespace-pre-wrap md:text-sm">
+                    {{ experience.company.type }}
+                  </p>
+                </div>
+
+                <!-- For sm and up screens -->
+                <div class="hidden min-w-0 flex-col gap-0.5 text-default xsUp:flex">
+                  <p class="text-xs text-toned whitespace-pre-wrap md:text-sm">
+                    {{ experience.company.name }}
+                  </p>
+
+                  <h5 class="font-semibold text-sm md:text-base leading-snug">
+                    {{ experience.headline }}
+                  </h5>
+
+                  <p class="text-toned text-xs leading-snug  whitespace-pre-wrap md:text-sm">
+                    {{ experience.subheadline }}
                   </p>
                 </div>
               </div>
             </Motion>
           </template>
 
-          <template #content="{ item }">
-            <div class="mt-4 space-y-4 text-left text-toned text-sm border border-muted p-4 mb-6">
+          <template #content="{ item: { experience } }">
+            <div class="mt-4 space-y-4 text-left text-toned text-sm border border-muted py-4 px-2 mb-6 rounded-lg sm:px-4 sm:py-6">
               <p
-                v-if="item.experience.summary"
+                v-if="experience.summary"
                 class="text-default leading-relaxed whitespace-pre-line"
               >
-                {{ item.experience.summary }}
+                {{ experience.summary }}
               </p>
 
-              <div v-if="item.experience.roles?.length" class="space-y-4">
+              <div v-if="experience.roles?.length" class="space-y-4">
                 <div
-                  v-for="(role, i) in item.experience.roles"
-                  :key="`${item.experience.slug}-${i}`"
+                  v-for="(role, i) in experience.roles"
+                  :key="`${experience.slug}-${i}`"
                   class="rounded-lg border border-default/10 p-3 md:p-4"
                 >
                   <div class="flex flex-col gap-1">
@@ -133,15 +153,15 @@ const accordionItems = computed<ExperienceAccordionItem[]>(() => {
                 </div>
               </div>
 
-              <div v-if="item.experience.company?.url" class="pt-1">
+              <div v-if="experience.company?.url" class="pt-1">
                 <NuxtLink
-                  :to="item.experience.company.url"
+                  :to="experience.company.url"
                   target="_blank"
                   class="text-sm underline underline-offset-4 hover:opacity-80"
                 >
                   Visit
                   <span>
-                    {{ item.experience.company.name }}
+                    {{ experience.company.name }}
                   </span>
                   <UIcon
                     name="i-lucide-arrow-up-right"
