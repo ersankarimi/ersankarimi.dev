@@ -23,7 +23,8 @@
     "postinstall": "nuxt prepare && pnpm rebuild better-sqlite3",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "relase": "release-it"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.82",
