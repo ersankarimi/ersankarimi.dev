@@ -1,8 +1,21 @@
 {
   "name": "ersankarimi.dev",
   "type": "module",
+  "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6",
+  "description": "Personal website and blog of Ersan Karimi",
+  "author": {
+    "name": "Ersan Karimi",
+    "email": "ersankarimi.dev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ersankarimi/ersankarimi.dev"
+  },
+  "engines": {
+    "node": ">=22.21.1 <23.0.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -21,16 +34,18 @@
     "@nuxtjs/seo": "3.3.0",
     "@vueuse/nuxt": "^14.1.0",
     "better-sqlite3": "^12.5.0",
-    "motion-v": "^1.7.3",
+    "motion-v": "^1.7.4",
     "nuxt": "^4.2.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.7.3",
     "@nuxt/eslint": "^1.12.1",
+    "@release-it/conventional-changelog": "^10.0.4",
     "@tailwindcss/typography": "^0.5.19",
     "eslint": "^9.39.2",
     "eslint-plugin-format": "^1.1.0",
-    "prettier": "^3.7.1",
+    "prettier": "^3.7.4",
+    "release-it": "^19.2.2",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.1"
   }
