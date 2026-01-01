@@ -1,62 +1,144 @@
-# Nuxt Portfolio Template
+# ersankarimi.dev
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+Personal website and portfolio of **Ersan Karimi** — a Front-End Developer based in **Balikpapan, Indonesia**.
 
-Use this template to create your own portfolio with [Nuxt UI](https://ui.nuxt.com).
+Built with **Nuxt 4**, **Nuxt UI**, **Nuxt Content**, and **Nuxt SEO**.
 
-- [Live demo](https://portfolio-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/getting-started/installation)
+- Live: `https://ersankarimi.vercel.app`
+- Contact: `ersankarimi.dev@gmail.com`
+- LinkedIn: `https://www.linkedin.com/in/ersankarimi/`
+- GitHub: `https://github.com/ersankarimi`
 
-<a href="https://portfolio-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/portfolio-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png">
-    <img alt="Nuxt Portfolio Template" src="https://ui.nuxt.com/assets/templates/nuxt/portfolio-dark.png">
-  </picture>
-</a>
+---
 
-## Quick Start
+## Features
 
-```bash [Terminal]
-npm create nuxt@latest -- -t github:nuxt-ui-templates/portfolio
-```
+- Simple pages: **Home**, **Experience**, **About**
+- Content-driven sections using **Nuxt Content**
+- Custom **OG Image** template (`PortfolioDracula`) using Satori
+- Fast UI with Nuxt UI + Iconify icons
 
-## Deploy your own
+---
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=portfolio&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fportfolio&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fportfolio-dark.png&demo-url=https%3A%2F%2Fportfolio-template.nuxt.dev%2F&demo-title=Nuxt%20Portfolio%20Template&demo-description=A%20sleek%20portfolio%20template%20to%20showcase%20your%20work%2C%20skills%20and%20blog%20powered%20by%20Nuxt%20Content.)
+## Tech Stack
 
-## Setup
+- Nuxt 4
+- @nuxt/ui
+- @nuxt/content
+- @nuxtjs/seo (SEO + OG image utilities)
+- @nuxt/image
+- motion-v
+- TypeScript + ESLint
 
-Make sure to install the dependencies:
+---
+
+## Requirements
+
+- Node: `>=22.21.1 <23.0.0`
+- Package manager: `pnpm`
+
+---
+
+## Getting Started
+
+Install dependencies:
 
 ```bash
 pnpm install
-```
+````
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Run development server:
 
 ```bash
 pnpm dev
 ```
 
-## Production
+Open:
 
-Build the application for production:
+* `http://localhost:3000`
+
+---
+
+## Scripts
+
+```bash
+pnpm dev        # Start dev server
+pnpm build      # Build for production
+pnpm preview    # Preview production build
+pnpm lint       # Lint
+pnpm lint:fix   # Lint + auto-fix
+pnpm typecheck  # Type-check
+```
+
+---
+
+## Content Structure
+
+Most of the site content lives under `content/`.
+
+Example structure:
+
+```txt
+content/
+  index.yml
+  about.yml
+  experience.yml
+  experience/
+    anggunpraya.md
+    elemesgroup.md
+```
+
+> Tip: keep the Home page lightweight and route deeper details into the Experience / About content.
+
+---
+
+## OG Images
+
+This repo uses a custom OG image template:
+
+* `components/OgImage/PortfolioDracula.vue`
+
+You can set OG image per page using:
+
+```ts
+defineOgImageComponent("PortfolioDracula", {
+  name: "Ersan Karimi",
+  role: "Front-End Developer",
+  tagline: "I build clean, responsive web UI and enjoy refining the details—clarity, consistency, and ease of use.",
+  location: "Balikpapan, Indonesia",
+  website: "ersankarimi.dev",
+  photo: "https://avatars.githubusercontent.com/u/73420137?v=4",
+  accent: "#BD93F9",
+})
+```
+
+---
+
+## Deployment
+
+This project works well on Vercel.
+
+General flow:
 
 ```bash
 pnpm build
-```
-
-Locally preview production build:
-
-```bash
 pnpm preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
 
-## Renovate integration
+## License
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+This project is personal and not intended as a template distribution.
+If you'd like to reuse parts of it, please reach out first.
+
+---
+
+## Credits
+
+- Base template: [Nuxt UI Portfolio Template](https://github.com/nuxt-ui-templates/portfolio)
+- UI: [Nuxt UI](https://ui.nuxt.com)
+- Framework: [Nuxt](https://nuxt.com)
+- Content: [Nuxt Content](https://content.nuxt.com)
+- SEO & OG Image: [Nuxt SEO](https://nuxtseo.com)
+- Icons: [Iconify (Lucide + Simple Icons)](https://iconify.design)
