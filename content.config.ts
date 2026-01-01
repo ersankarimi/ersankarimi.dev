@@ -65,6 +65,10 @@ export default defineContentConfig({
               label: z.string().optional(),
               headline: z.string(),
               subheadline: z.string(),
+              role: z.string(),
+              period: z.string(),
+              locationType: z.string(),
+              employmentType: z.string(),
 
               company: z.object({
                 "name": z.string(),
@@ -73,6 +77,7 @@ export default defineContentConfig({
                 "slug": z.string(),
                 "color-dark": z.string(),
                 "color-light": z.string(),
+                "type": z.string(),
               }),
 
               // expanded content
