@@ -102,7 +102,11 @@ experience:
     - slug: anggunpraya
       label: Anggun Praya
       headline: Founder & Developer · Oct 2024 — Present
-      subheadline: Personal product · Remote (Balikpapan)
+      subheadline: Service/Product · Remote (Balikpapan)
+      role: Founder & Developer
+      period: Oct 2024 — Present
+      locationType: Remote
+      employmentType: Self-Employed
       company:
         slug: anggunpraya
         name: Anggun Praya
@@ -110,6 +114,7 @@ experience:
         url: https://anggunpraya.id
         color-light: "#914e17"
         color-dark: "#f59e0b"
+        type: Service/Product
       summary: |
         A digital wedding invitation brand I'm building for Indonesian couples—focused on elegant, modern, and easy-to-use invitations that couples can customize and share with their guests.
       roles:
@@ -125,16 +130,20 @@ experience:
             - Support early growth through content direction and customer conversations
           links:
             - label: Website
-              url: https://anggunpraya.id
+              url: "https://anggunpraya.id/?utm_source=ersankarimi-portfolio&utm_medium=website&utm_campaign=experience&utm_content=anggunpraya-website"
             - label: Instagram
-              url: https://instagram.com/anggunpraya
+              url: "https://instagram.com/anggunpraya?utm_source=ersankarimi-portfolio&utm_medium=website&utm_campaign=experience&utm_content=anggunpraya-instagram"
             - label: TikTok
-              url: https://www.tiktok.com/@anggunpraya.id
+              url: "https://www.tiktok.com/@anggunpraya.id?utm_source=ersankarimi-portfolio&utm_medium=website&utm_campaign=experience&utm_content=anggunpraya-tiktok"
 
     - slug: elemesgroup
       label: Elemes Group
       headline: Front-End Developer · Jun 2023 — Present
       subheadline: Software Development · Remote & On-site (Tangerang Selatan)
+      role: Front-End Developer
+      period: Jun 2023 — Present
+      locationType: Remote & On-site
+      employmentType: Part-time, Contract, Internship
       company:
         slug: elemesgroup
         name: Elemes Group
@@ -142,6 +151,7 @@ experience:
         url: https://elemesgroup.com
         color-light: "#1d4fd8"
         color-dark: "#3b82f6"
+        type: Software Development
       summary: |
         Front-end role in a software development team delivering client projects.
         I focus on building clean, responsive UI, shipping features reliably, and improving product quality through iterations.
