@@ -38,7 +38,7 @@ defineOgImageComponent("PortfolioDracula", {
 
     <UPageSection
       :ui="{
-        container: 'pt-0! flex flex-col gap-16',
+        container: 'px-0 pt-0! flex flex-col gap-16',
       }"
     >
       <Motion
