@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.2](https://github.com-ersankarimi/ersankarimi/ersankarimi/compare/v1.0.1...v1.0.2) (2026-01-15)
+
+### Features
+
+* add nuxt:upgrade script to package.json ([8efbea5](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/8efbea5b0a4767ea510a18cd0a6f49f446157975))
+* add pull request template for improved contribution guidelines ([dc9a410](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/dc9a410a8c043570e07687c4df0719dfc4d76a4f))
+* enhance SEO metadata for About Me and index pages ([52fa1de](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/52fa1dee55dd05fb477d1852260c84db8155bbf6))
+* fix ogDescription property access in SEO metadata ([c2dabba](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/c2dabba2c49dedbeda7d11686f300a5ed2fd1504))
+* fix SEO metadata property access in About page ([9de753a](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/9de753a5ef934e8fcb749cd26e42aa6d626011a5))
+* refactor content schema to include SEO and remove unused schemas ([c3bea64](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/c3bea64f3d42afd31dea041f83b844062e8da93b))
+* reorganize pnpm-workspace.yaml for clarity and structure ([8a2f21c](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/8a2f21c653a8b1aedf1e77f953073986ec737c24))
+* update dependencies in package.json ([3f36880](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/3f368801f886e22d379a6dbbc5be0d56d12593f7))
+* update packageManager version in package.json ([fed148c](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/fed148c284360f189488240a6d7e4c9091390699))
+* update resume link in footer and adjust aria-label ([d7c250b](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/d7c250b3cdecaa775e60372e8b9689436ae310cf))
+* update the template title ([e6bb20c](https://github.com-ersankarimi/ersankarimi/ersankarimi/commit/e6bb20c3bba343629bb39671f136b400b101c154))
+
 ## [1.0.1](https://github.com-ersankarimi/ersankarimi/ersankarimi/compare/v1.0.0...v1.0.1) (2026-01-01)
 
 ### Bug Fixes
