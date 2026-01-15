@@ -17,7 +17,7 @@ useSeoMeta({
   title: page.value?.seo.title || page.value?.title,
   ogTitle: page.value?.seo.title || page.value?.title,
   description: page.value?.seo.description || page.value?.description,
-  ogDescription: page.value?.seo.description || page.value?.description,
+  ogDescription: page.value?.seo?.ogDescription || page.value?.description,
 });
 
 defineOgImageComponent("PortfolioDracula", {
