@@ -19,28 +19,36 @@ function createButtonSchema() {
   });
 }
 
-function createImageSchema() {
-  return z.object({
-    src: z.string().editor({ input: "media" }),
-    alt: z.string(),
-  });
-}
+// function createImageSchema() {
+//   return z.object({
+//     src: z.string().editor({ input: "media" }),
+//     alt: z.string(),
+//   });
+// }
 
-function createAuthorSchema() {
+// function createAuthorSchema() {
+//   return z.object({
+//     name: z.string(),
+//     description: z.string().optional(),
+//     username: z.string().optional(),
+//     twitter: z.string().optional(),
+//     to: z.string().optional(),
+//     avatar: createImageSchema().optional(),
+//   });
+// }
+
+// function createTestimonialSchema() {
+//   return z.object({
+//     quote: z.string(),
+//     author: createAuthorSchema(),
+//   });
+// }
+
+function createSeoSchema() {
   return z.object({
-    name: z.string(),
+    title: z.string().optional(),
     description: z.string().optional(),
-    username: z.string().optional(),
-    twitter: z.string().optional(),
-    to: z.string().optional(),
-    avatar: createImageSchema().optional(),
-  });
-}
-
-function createTestimonialSchema() {
-  return z.object({
-    quote: z.string(),
-    author: createAuthorSchema(),
+    ogDescription: z.string().optional(),
   });
 }
 
@@ -51,13 +59,11 @@ export default defineContentConfig({
       type: "page",
       source: "index.yml",
       schema: z.object({
-        hero: z.object({
-          links: z.array(createButtonSchema()),
-          images: z.array(createImageSchema()),
-        }),
+        seo: createSeoSchema(),
         about: createBaseSchema().extend({
           links: z.array(createButtonSchema()),
         }),
+
         experience: createBaseSchema().extend({
           items: z.array(
             z.object({
@@ -102,8 +108,6 @@ export default defineContentConfig({
           ),
         }),
 
-        testimonials: z.array(createTestimonialSchema()),
-        blog: createBaseSchema(),
         faq: createBaseSchema().extend({
           categories: z.array(
             z.object({
@@ -125,6 +129,7 @@ export default defineContentConfig({
       type: "page",
       source: "about.yml",
       schema: z.object({
+        seo: createSeoSchema(),
         content: z.object({}),
       }),
     }),
