@@ -27,10 +27,9 @@ export default defineAppConfig({
     links: [
       {
         "icon": "i-simple-icons-readdotcv",
-        "to": "/",
+        "to": "https://drive.google.com/file/d/1cXnL4p0aGOdC758f29qXsVbYlT0_wo-G/view?usp=sharing",
         "target": "_blank",
-        "aria-label": "Download CV",
-        "disabled": true,
+        "aria-label": "Link to Resume",
       },
       {
         "icon": "i-simple-icons-github",

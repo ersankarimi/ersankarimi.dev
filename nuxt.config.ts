@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Ersan Karimi - Front-End Developer",
-      titleTemplate: "%s | Ersan Karimi",
+      titleTemplate: "%s",
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       htmlAttrs: {
@@ -162,7 +162,7 @@ export default defineNuxtConfig({
       ogSiteName: "Ersan Karimi",
       ogLocale: "en_US",
       ogType: "website",
-      ogUrl: "https://ersankarimi.vercell.app",
+      ogUrl: "https://ersankarimi.vercel.app",
       ogTitle: "Ersan Karimi - Front-End Developer",
     },
   },
