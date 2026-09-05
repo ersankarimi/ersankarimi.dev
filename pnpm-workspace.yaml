@@ -3,9 +3,9 @@ shellEmulator: true
 trustPolicy: off
 
 overrides:
-  "@tiptap/core": "^3.14.0"
-  "@tiptap/pm": "^3.14.0"
-  "undici": ">=6.23.0"
+  "@tiptap/core": "^3.31.3"
+  "@tiptap/pm": "^3.31.3"
+  "undici": ">=6.28.1"
 ignoredBuiltDependencies:
   - '@parcel/watcher'
   - '@tailwindcss/oxide'
@@ -15,4 +15,3 @@ ignoredBuiltDependencies:
 onlyBuiltDependencies:
   - better-sqlite3
   - sharp
-
