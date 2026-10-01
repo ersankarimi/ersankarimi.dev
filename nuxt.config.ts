@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: "2026-10-01",
   devtools: {
     enabled: true,
   },
@@ -10,8 +10,6 @@ export default defineNuxtConfig({
     head: {
       title: "Ersan Karimi - Front-End Developer",
       titleTemplate: "%s",
-      charset: "utf-8",
-      viewport: "width=device-width, initial-scale=1",
       htmlAttrs: {
         lang: "en",
       },
@@ -115,6 +113,8 @@ export default defineNuxtConfig({
   },
 
   site: {
+    title: "Ersan Karimi - Front-End Developer",
+    description: "Ersan Karimi's personal website showcasing front-end development projects, blog posts, and insights into web technologies.",
     indexable: import.meta.dev,
     debug: import.meta.dev,
     name: import.meta.env.NUXT_SITE_NAME,
@@ -141,7 +141,6 @@ export default defineNuxtConfig({
   seo: {
     meta: {
       // Basic SEO
-      description: "Welcome to my personal website where I share my projects and blog posts about front-end development.",
       author: "Ersan Karimi",
 
       // Theme & Color
@@ -159,11 +158,8 @@ export default defineNuxtConfig({
       applicationName: "Ersan Karimi",
 
       // Nuxt SEO Utils already sets the below tags for you
-      ogSiteName: "Ersan Karimi",
       ogLocale: "en_US",
-      ogType: "website",
-      ogUrl: "https://ersankarimi.vercel.app",
-      ogTitle: "Ersan Karimi - Front-End Developer",
+
     },
   },
 });
