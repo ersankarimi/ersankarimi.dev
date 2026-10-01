@@ -34,7 +34,7 @@ Built with **Nuxt 4**, **Nuxt UI**, **Nuxt Content**, and **Nuxt SEO**.
 
 ## Requirements
 
-- Node: `>=22.21.1 <23.0.0`
+- Node: `>=24.20.0 <24.21.0`
 - Package manager: `pnpm`
 
 ---
