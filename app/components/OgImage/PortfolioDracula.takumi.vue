@@ -41,8 +41,8 @@ withDefaults(
       <!-- Soft glow -->
       <div class="absolute inset-0 flex">
         <div
-          class="absolute -right-44 -top-52 w-183 h-183 rounded-full blur-3xl opacity-20"
-          :style="{ background: accent }"
+          class="absolute -right-44 -top-52 w-183 h-183 rounded-full opacity-20"
+          :style="{ background: accent, filter: 'blur(64px)' }"
         />
         <div
           class="absolute inset-[20px] rounded-[44px]"

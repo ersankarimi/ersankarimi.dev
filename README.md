@@ -101,7 +101,7 @@ This repo uses a custom OG image template:
 You can set OG image per page using:
 
 ```ts
-defineOgImageComponent("PortfolioDracula", {
+defineOgImageComponent("PortfolioDracula.takumi", {
   name: "Ersan Karimi",
   role: "Front-End Developer",
   tagline: "I build clean, responsive web UI and enjoy refining the details—clarity, consistency, and ease of use.",
