@@ -7,3 +7,11 @@ allowBuilds:
   esbuild: true
   unrs-resolver: true
   vue-demi: true
+minimumReleaseAgeExclude:
+  - "@iconify-json/lucide@1.2.138"
+overrides:
+  esbuild@>=0.27.3 <0.28.1: ^0.28.1
+  undici@>=7.0.0 <7.29.1: ^7.29.1
+  cac@>6.7.14: ^6.7.14
+  oxc-parser: ^0.140.0
+  unplugin@<3.3.0: ^3.3.0
