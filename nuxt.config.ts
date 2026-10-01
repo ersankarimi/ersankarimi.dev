@@ -43,7 +43,7 @@ export default defineNuxtConfig({
     },
   ],
 
-  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@nuxt/content", "@vueuse/nuxt", "motion-v/nuxt", "@nuxtjs/seo"],
+  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@nuxt/content", "@vueuse/nuxt", "motion-v/nuxt", "@nuxtjs/seo", "@nuxt/fonts"],
 
   eslint: {
     config: {
@@ -77,7 +77,6 @@ export default defineNuxtConfig({
   fonts: {
     defaults: {
       subsets: ["latin"],
-      weights: [400, 700],
       preload: true,
       styles: ["normal"],
     },
@@ -87,7 +86,7 @@ export default defineNuxtConfig({
         name: "Instrument Serif",
         display: "swap",
         preload: true,
-        weights: [400, 700],
+        weights: [400, 500, 600, 700],
         // provider: "local",
       },
       // For Sans-Serif font
@@ -95,7 +94,7 @@ export default defineNuxtConfig({
         name: "Public Sans",
         display: "swap",
         preload: true,
-        weights: [400, 700],
+        weights: [400, 500, 600, 700],
         // provider: "local",
       },
     ],
@@ -149,10 +148,6 @@ export default defineNuxtConfig({
         { content: "white", media: "(prefers-color-scheme: light)" },
       ],
       colorScheme: "dark light",
-
-      // Social Media
-      twitterCreator: "@ersankarimii",
-      twitterSite: "@ersankarimii",
 
       // App Info
       applicationName: "Ersan Karimi",
