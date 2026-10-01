@@ -20,7 +20,7 @@ useSeoMeta({
   ogDescription: page.value?.seo?.ogDescription || page.value?.description,
 });
 
-defineOgImageComponent("PortfolioDracula", {
+defineOgImage("PortfolioDracula", {
   name: "Ersan Karimi",
   role: "Front-End Developer",
   tagline:

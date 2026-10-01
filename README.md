@@ -34,7 +34,7 @@ Built with **Nuxt 4**, **Nuxt UI**, **Nuxt Content**, and **Nuxt SEO**.
 
 ## Requirements
 
-- Node: `>=22.21.1 <23.0.0`
+- Node: `>=24.20.0 <24.21.0`
 - Package manager: `pnpm`
 
 ---
@@ -101,7 +101,7 @@ This repo uses a custom OG image template:
 You can set OG image per page using:
 
 ```ts
-defineOgImageComponent("PortfolioDracula", {
+defineOgImageComponent("PortfolioDracula.takumi", {
   name: "Ersan Karimi",
   role: "Front-End Developer",
   tagline: "I build clean, responsive web UI and enjoy refining the details—clarity, consistency, and ease of use.",
