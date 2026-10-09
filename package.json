@@ -40,7 +40,7 @@
     "@vueuse/nuxt": "^15.0.0",
     "better-sqlite3": "^13.0.3",
     "motion-v": "^2.5.1",
-    "nuxt": "^4.5.2"
+    "nuxt": "^4.6.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.5.1",
