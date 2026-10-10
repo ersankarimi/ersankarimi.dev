@@ -10,8 +10,8 @@ allowBuilds:
 minimumReleaseAgeExclude:
   - "@iconify-json/lucide@1.2.138"
 overrides:
-  esbuild@>=0.27.3 <0.28.1: ^0.28.1
-  undici@>=7.0.0 <7.29.1: ^7.29.1
+  esbuild@>=0.27.3 <0.28.1: ^0.28.2
+  undici@>=7.0.0 <7.29.1: ^7.30.0
   cac@>6.7.14: ^6.7.14
-  oxc-parser: ^0.140.0
-  unplugin@<3.3.0: ^3.3.0
+  oxc-parser: ^0.153.0
+  unplugin@<3.3.0: ^3.4.0
