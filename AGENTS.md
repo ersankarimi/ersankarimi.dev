@@ -1,0 +1,94 @@
+# Codex project instructions
+
+## Scope and working agreement
+
+- Work in this repository only unless the user expands the scope. This is Ersan's personal website, currently a portfolio built from a Nuxt UI template.
+- Discussion-only requests such as “talk dulu”, “brainstorming”, or “jangan edit” mean no file changes. Ask a focused question when an unresolved requirement materially changes the implementation; proceed with routine choices within the authorized scope.
+- Preserve unrelated local changes. Inspect Git status before edits and review the final diff. Do not stage, commit, push, release, or deploy unless requested.
+- Respond in the user's language, usually Indonesian. Report the outcome, affected files, actual checks, and remaining limitations concisely.
+
+## Commands and user control
+
+- Follow `/Users/sulee/.codex/RTK.md` on this machine. Prefix shell commands with `rtk`; use `rtk proxy` for commands without a native wrapper. If RTK is unavailable elsewhere, report it and use the available equivalent.
+- Run build, generate, lint, typecheck, dev server, or preview only when the user explicitly requests the relevant action. Prior authorization for the same ongoing task remains valid.
+- Do not install dependencies, run formatters, or add a test runner as an incidental part of an unrelated change. Read-only file inspection and Git diff checks are permitted.
+- Ask before taking over, capturing, or operating the user's screen, browser, or native apps for verification. A coding request alone does not authorize screen takeover. Do not repeatedly ask when the user has already granted that scope for the task.
+- Never present a static review as proof of runtime behavior, visual correctness, responsive behavior, generated HTML, or OG rendering.
+
+## Repository entry points
+
+- App shell: `app/app.vue`; current layout: `app/layouts/default.vue`.
+- Current routes: `app/pages/index.vue` (`/`) and `app/pages/about.vue` (`/about`). Navigation lives in `app/utils/links.ts`.
+- Content: `content/index.yml`, `content/about.yml`; collections and schemas: `content.config.ts`.
+- Shared UI/contact configuration: `app/app.config.ts`; design tokens and fonts: `app/assets/css/main.css`.
+- Component registration in `nuxt.config.ts`: `App` for UI, `L` for layouts, `P` for partials, `OgImage` for OG templates. Nuxt UI components use `U`.
+- Read the project skill at [.agents/skills/ersankarimi-dev/SKILL.md](.agents/skills/ersankarimi-dev/SKILL.md) for implementation or review; load only the references needed for the task.
+
+## Component naming and folder organization
+
+Use **general → specific** naming: registered prefix → domain → component → part → variant. Prefer clarity over mechanical consistency, and keep structure simple until actual complexity justifies grouping.
+
+### Naming and ownership
+
+- Evaluate the **resolved component name**, not the filename alone. Preserve the registered `App`, `L`, `P`, and `OgImage` prefixes; `U` belongs to Nuxt UI. Do not change component registration merely to match an unprefixed example.
+- Name tightly coupled children after their parent in the resolved namespace: `PLandingWorkExperience` → `PLandingWorkExperienceItem`, or `AppTable` → `AppTableHeader`. Avoid reversed names such as `AppHeaderTable` or `PRowGuestTable`.
+- Define ownership by purpose, not merely by which component renders another. `AppColorModeButton` stays reusable even though `LHeader` renders it; do not rename it as a header-specific child.
+- Generic reusable components belong in `ui` without a feature prefix, e.g. `ui/Badge.vue` → `AppBadge`. Components meaningful only within a domain keep that domain, e.g. `partials/guest/table/Row.vue` → `PGuestTableRow`.
+- Preserve existing casing: category/domain folders are lowercase (`ui`, `layouts`, `partials`, `landing`), ordinary component files are PascalCase (`Hero.vue`, `WorkExperience.vue`), and family roots use lowercase `index.vue`. New domain/family folders use lowercase names, with kebab-case for multiword names (e.g. `work-experience`). Keep existing `OgImage` casing and renderer suffixes as framework-specific conventions; do not normalize them incidentally.
+
+### Single components and component families
+
+- A standalone component remains one file. Keep `ui/ColorModeButton.vue` or `ui/Badge.vue`; do not create a folder containing only `index.vue` for hypothetical future children.
+- When several actual files form a tightly coupled family, prefer a folder under the appropriate category/domain. For example, if WorkExperience gains its own extracted Item and Header, prefer `partials/landing/work-experience/{index,Item,Header}.vue` over scattered `WorkExperience.vue`, `WorkExperienceItem.vue`, and `WorkExperienceHeader.vue`.
+- Domain folders can group related standalone components without defining a root component. The current `partials/landing/{Hero,About,WorkExperience,FAQ}.vue` is valid; it does not require a `landing/index.vue`.
+- Use `index.vue` only when a family folder has a real parent/root component. Do not create a root merely to aggregate sibling files, and do not use both `Table.vue` and `table/index.vue` when they resolve to the same name.
+- Let the directory provide context: prefer `ui/table/Header.vue` to `ui/table/TableHeader.vue` or `ui/table/AppTableHeader.vue`. Nuxt may deduplicate repeated segments, but redundant filenames still obscure ownership and are not the preferred convention.
+- Add nested family folders only when they group actual related files, such as `table/cell/{index,Action}.vue`. Do not mirror every rendered DOM/component level with directories such as `table/body/row/cell/content/index.vue`.
+- Reuse existing Nuxt UI primitives before creating custom generic wrappers. The examples below illustrate naming if a custom component is needed; they are not a request to build replacements for `UTable`, `UButton`, or `UModal`.
+
+### Directory-based namespaces in this repository
+
+`nuxt.config.ts` registers separate component roots with prefixes and does not disable `pathPrefix`. Paths below are relative to `app/components/`; the registered category root itself is replaced by its prefix in the resolved name.
+
+| Path | Resolved name | Status |
+| --- | --- | --- |
+| `ui/ColorModeButton.vue` | `AppColorModeButton` | Existing standalone |
+| `layouts/Header.vue` | `LHeader` | Existing layout component |
+| `partials/landing/Hero.vue` | `PLandingHero` | Existing domain component |
+| `ui/table/index.vue` | `AppTable` | Example family root |
+| `ui/table/Header.vue` | `AppTableHeader` | Example tightly coupled part |
+| `ui/table/cell/index.vue` | `AppTableCell` | Example nested family root |
+| `ui/table/cell/Action.vue` | `AppTableCellAction` | Example nested part |
+| `partials/landing/work-experience/index.vue` | `PLandingWorkExperience` | Example preserving current parent name |
+| `partials/landing/work-experience/Item.vue` | `PLandingWorkExperienceItem` | Example parent-owned child |
+| `partials/guest/table/index.vue` | `PGuestTable` | Example domain family root |
+| `partials/guest/table/EmptyState.vue` | `PGuestTableEmptyState` | Example domain-owned part |
+
+### Checklist for creating or moving components
+
+1. Identify the domain/parent and whether the component is genuinely reusable or tightly coupled.
+2. Choose the existing registered root and the smallest structure: one file for a standalone component; a grouped folder for a real family.
+3. Check casing, namespace contribution, general → specific ordering, parent-prefix inheritance, redundant segments, and collisions with existing components.
+4. Keep related files discoverable together; justify additional nesting by actual ownership/grouping value.
+5. Inspect `nuxt.config.ts`, current usages, explicit imports, and existing generated declarations in `.nuxt/components.d.ts` when available. Generated declarations may be stale and do not prove a hypothetical path resolves correctly. If generation/runtime verification is needed, follow the existing user-authorization rules; never edit generated declarations.
+6. For an authorized move, update every affected template, import, and other component-name reference. Do not mass rename/refactor existing components as part of an instruction-only task.
+
+## Implementation boundaries
+
+- Follow the actual code and package configuration when README examples disagree. Recheck version-sensitive behavior against the installed dependency and official documentation when needed.
+- Prefer existing Nuxt UI components, semantic Tailwind tokens, and local component patterns. Preserve the current layout and content unless the task asks to change them.
+- Keep copy in its existing content/config source. Do not invent experience, availability, personal claims, or external links.
+- Inspect the collection schema and its consumers together when changing content fields. Keep Nuxt data loading compatible with SSR; browser APIs belong in client interactions or guarded client code.
+- Treat edits to global CSS, `app.config.ts`, the shared layout, motion constants, or SEO configuration as changes affecting both current pages. Check their consumers without broadening the task into unrelated cleanup.
+- Never edit generated `.nuxt`, `.output`, `.data`, or dependency files as the fix. Do not expose local environment values in output or tracked documentation.
+
+## Current state versus future decisions
+
+The Body Project link currently points to GitHub Pages from About. Its future centralization decisions are recorded in the skill's architecture reference. They are not implemented and do not authorize migration during unrelated work.
+
+## Code Review Rules
+
+- Flag broken content/schema contracts, missing-content failures, incorrect route or navigation assumptions, and browser-only APIs executing during SSR.
+- Check shared UI changes for consequences on Home, About, light/dark colors, and narrow screens. Identify unverified visual behavior explicitly.
+- For SEO or OG changes, distinguish configuration intent from emitted metadata and renderer output. Do not silently change production indexing, site URL, renderer, or font configuration to resolve an unrelated issue.
+- Focus findings on actionable behavior within the diff; do not treat the template's hypothetical features or stale README examples as implemented requirements.
