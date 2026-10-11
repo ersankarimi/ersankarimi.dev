@@ -9,6 +9,8 @@ allowBuilds:
   vue-demi: true
 minimumReleaseAgeExclude:
   - "@iconify-json/lucide@1.2.138"
+  - "@vue/language-core@3.3.13"
+  - vue-tsc@3.3.13
 overrides:
   esbuild@>=0.27.3 <0.28.1: ^0.28.1
   undici@>=7.0.0 <7.29.1: ^7.29.1
