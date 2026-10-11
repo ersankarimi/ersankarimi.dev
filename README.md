@@ -15,7 +15,7 @@ Built with **Nuxt 4**, **Nuxt UI**, **Nuxt Content**, and **Nuxt SEO**.
 
 - Simple pages: **Home**, **Experience**, **About**
 - Content-driven sections using **Nuxt Content**
-- Custom **OG Image** template (`PortfolioDracula`) using Satori
+- Custom **OG Image** template (`PortfolioDracula`) using Takumi
 - Fast UI with Nuxt UI + Iconify icons
 
 ---
@@ -139,12 +139,12 @@ content/
 
 This repo uses a custom OG image template:
 
-- `components/OgImage/PortfolioDracula.vue`
+- `app/components/OgImage/portfolio-dracula.takumi.vue`
 
 You can set OG image per page using:
 
 ```ts
-defineOgImageComponent("PortfolioDracula.takumi", {
+defineOgImage("PortfolioDracula", {
   name: "Ersan Karimi",
   role: "Front-End Developer",
   tagline: "I build clean, responsive web UI and enjoy refining the details clarity, consistency, and ease of use.",

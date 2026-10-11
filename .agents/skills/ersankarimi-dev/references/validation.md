@@ -17,7 +17,6 @@ Inspected on 2026-10-11. Verify package files and installed versions for the cur
 | --- | --- | --- |
 | `package.json`, `.nvmrc`, CI | Engines require Node `>=24.20.0 <24.21.0`; `.nvmrc` selects `v24.21.0`; CI selects Node 22 | Do not claim a single consistent Node baseline. Resolve the intended version as a tooling task before installation/CI repairs. |
 | README versus `app/pages` | README mentions Experience and blog-oriented content; only Home and About routes exist | Use actual route files as implemented behavior. |
-| README versus OG template | README mentions Satori; actual template ends in `.takumi.vue` | Use the current renderer and dependency behavior. |
 | Content versus schema | About body is YAML text while its schema declares an object; Home link includes fields not listed in the button schema | Trace parsed output/types and consumers when the relevant contract changes. |
 
 These observations are not automatic repair tasks. Keep unrelated source and configuration unchanged.
@@ -43,6 +42,7 @@ Use `rtk proxy pnpm ...` if a command is unsupported by the RTK wrapper. Report 
 
 ## Validation by changed behavior
 
+- Filename-only changes: compare resolved names using the installed Nuxt resolver; check acronym changes, collisions, paths/imports, and documentation. Use a per-command `core.ignorecase=false` Git override to inspect case-only moves on macOS; follow the staging rule in `AGENTS.md` when a commit is requested. Keep special filenames and `OgImage` registration intact. The OG template is `app/components/OgImage/portfolio-dracula.takumi.vue`, addressed as `PortfolioDracula`. Existing generated declarations may be stale after a rename; do not edit them or regenerate without authorization.
 - Content/schema: inspect YAML syntax, required fields, collection inclusion, and consumer expectations. If authorized, verify actual collection output and rendering, not just source text.
 - Layout/UI: inspect both page consumers for shared changes. When browser verification is authorized, check narrow/wide widths, light/dark modes, header overlap, links, accordions, FAQ tabs, and keyboard interaction relevant to the change.
 - SSR/client behavior: check that browser APIs run in events or client-only contexts; route and collection changes need direct-entry/refresh checks when runtime verification is authorized.

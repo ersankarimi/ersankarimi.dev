@@ -24,7 +24,8 @@ Read the repository's root `AGENTS.md` first. This skill supports the existing w
 ## Task-specific decisions
 
 - Content changes: preserve factual copy, outbound destinations, YAML multiline semantics, and MDC rendering; inspect schema mismatches instead of assuming arbitrary UI props pass through.
-- Component creation/moves: apply the root `AGENTS.md` section “Component naming and folder organization” as the source of truth. Check registered prefixes and resolved names; keep standalone components as files and group actual tightly coupled families without redundant parent names or speculative nesting.
+- Component creation/moves: apply the root `AGENTS.md` section “Component naming and folder organization” as the source of truth. Use kebab-case filenames/folders while preserving PascalCase resolved names and idiomatic code symbols; respect the documented framework exceptions. Check registered prefixes, acronym resolution, and name collisions; keep standalone components as files and group actual tightly coupled families without redundant parent names or speculative nesting.
+- Supporting files: use kebab-case for composable/util/schema filenames, e.g. `use-body-program.ts` exporting `useBodyProgram`. Filename convention does not authorize changing function or variable casing, adding speculative composables, or renaming standardized framework/tooling files.
 - UI changes: retain the page's existing responsive and color-mode intent. Global slot overrides and design tokens affect multiple consumers; use a local override for a local requirement when practical.
 - New routes: choose content storage and layout according to the actual page need. Route creation does not automatically imply navbar inclusion. Confirm discovery/indexing intent when unresolved.
 - SEO/OG changes: inspect page metadata, `nuxt.config.ts`, and the Takumi template as separate parts of the flow. Use the validation reference for renderer and environment caveats.

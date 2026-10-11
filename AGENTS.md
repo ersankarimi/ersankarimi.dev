@@ -33,17 +33,19 @@ Use **general → specific** naming: registered prefix → domain → component 
 - Evaluate the **resolved component name**, not the filename alone. Preserve the registered `App`, `L`, `P`, and `OgImage` prefixes; `U` belongs to Nuxt UI. Do not change component registration merely to match an unprefixed example.
 - Name tightly coupled children after their parent in the resolved namespace: `PLandingWorkExperience` → `PLandingWorkExperienceItem`, or `AppTable` → `AppTableHeader`. Avoid reversed names such as `AppHeaderTable` or `PRowGuestTable`.
 - Define ownership by purpose, not merely by which component renders another. `AppColorModeButton` stays reusable even though `LHeader` renders it; do not rename it as a header-specific child.
-- Generic reusable components belong in `ui` without a feature prefix, e.g. `ui/Badge.vue` → `AppBadge`. Components meaningful only within a domain keep that domain, e.g. `partials/guest/table/Row.vue` → `PGuestTableRow`.
-- Preserve existing casing: category/domain folders are lowercase (`ui`, `layouts`, `partials`, `landing`), ordinary component files are PascalCase (`Hero.vue`, `WorkExperience.vue`), and family roots use lowercase `index.vue`. New domain/family folders use lowercase names, with kebab-case for multiword names (e.g. `work-experience`). Keep existing `OgImage` casing and renderer suffixes as framework-specific conventions; do not normalize them incidentally.
+- Generic reusable components belong in `ui` without a feature prefix, e.g. `ui/badge.vue` → `AppBadge`. Components meaningful only within a domain keep that domain, e.g. `partials/guest/table/row.vue` → `PGuestTableRow`.
+- Use lowercase **kebab-case for project-owned file and folder names**, e.g. `hero.vue`, `work-experience.vue`, `color-mode-button.vue`, and `work-experience/`. This is a filesystem convention, not snake_case or a change to code symbols: keep template names PascalCase and functions/variables in their existing TypeScript/Vue casing.
+- Preserve special framework/tooling names and suffixes, including `index.vue`, `app.vue`, `error.vue`, `nuxt.config.ts`, `content.config.ts`, `app.config.ts`, `package.json`, and `.client.vue`/`.server.vue` suffixes when used. Keep the OG integration directory `OgImage` and renderer suffix `.takumi.vue`, with the template filename `portfolio-dracula.takumi.vue`. Keep standardized instruction/documentation names such as `AGENTS.md`, `SKILL.md`, `README.md`, `CHANGELOG.md`, `LICENSE`, and GitHub templates; do not rename generated/dependency files or historical changelog references.
+- Apply kebab-case to new composable, utility, schema, and other supporting filenames. For example, `app/composables/use-body-program.ts` exports `useBodyProgram`, while `shared/body-schema.ts` exports `bodySchema`. Preserve the `use` prefix for composable functions. There are currently no custom composables to rename; do not create one just to demonstrate the convention.
 
 ### Single components and component families
 
-- A standalone component remains one file. Keep `ui/ColorModeButton.vue` or `ui/Badge.vue`; do not create a folder containing only `index.vue` for hypothetical future children.
-- When several actual files form a tightly coupled family, prefer a folder under the appropriate category/domain. For example, if WorkExperience gains its own extracted Item and Header, prefer `partials/landing/work-experience/{index,Item,Header}.vue` over scattered `WorkExperience.vue`, `WorkExperienceItem.vue`, and `WorkExperienceHeader.vue`.
-- Domain folders can group related standalone components without defining a root component. The current `partials/landing/{Hero,About,WorkExperience,FAQ}.vue` is valid; it does not require a `landing/index.vue`.
-- Use `index.vue` only when a family folder has a real parent/root component. Do not create a root merely to aggregate sibling files, and do not use both `Table.vue` and `table/index.vue` when they resolve to the same name.
-- Let the directory provide context: prefer `ui/table/Header.vue` to `ui/table/TableHeader.vue` or `ui/table/AppTableHeader.vue`. Nuxt may deduplicate repeated segments, but redundant filenames still obscure ownership and are not the preferred convention.
-- Add nested family folders only when they group actual related files, such as `table/cell/{index,Action}.vue`. Do not mirror every rendered DOM/component level with directories such as `table/body/row/cell/content/index.vue`.
+- A standalone component remains one file. Keep `ui/color-mode-button.vue` or `ui/badge.vue`; do not create a folder containing only `index.vue` for hypothetical future children.
+- When several actual files form a tightly coupled family, prefer a folder under the appropriate category/domain. For example, if WorkExperience gains its own extracted Item and Header, prefer `partials/landing/work-experience/{index,item,header}.vue` over scattered `work-experience.vue`, `work-experience-item.vue`, and `work-experience-header.vue`.
+- Domain folders can group related standalone components without defining a root component. The current `partials/landing/{hero,about,work-experience,faq}.vue` is valid; it does not require a `landing/index.vue`.
+- Use `index.vue` only when a family folder has a real parent/root component. Do not create a root merely to aggregate sibling files, and do not use both `table.vue` and `table/index.vue` when they resolve to the same name.
+- Let the directory provide context: prefer `ui/table/header.vue` to `ui/table/table-header.vue` or `ui/table/app-table-header.vue`. Nuxt may deduplicate repeated segments, but redundant filenames still obscure ownership and are not the preferred convention.
+- Add nested family folders only when they group actual related files, such as `table/cell/{index,action}.vue`. Do not mirror every rendered DOM/component level with directories such as `table/body/row/cell/content/index.vue`.
 - Reuse existing Nuxt UI primitives before creating custom generic wrappers. The examples below illustrate naming if a custom component is needed; they are not a request to build replacements for `UTable`, `UButton`, or `UModal`.
 
 ### Directory-based namespaces in this repository
@@ -52,17 +54,17 @@ Use **general → specific** naming: registered prefix → domain → component 
 
 | Path | Resolved name | Status |
 | --- | --- | --- |
-| `ui/ColorModeButton.vue` | `AppColorModeButton` | Existing standalone |
-| `layouts/Header.vue` | `LHeader` | Existing layout component |
-| `partials/landing/Hero.vue` | `PLandingHero` | Existing domain component |
+| `ui/color-mode-button.vue` | `AppColorModeButton` | Existing standalone |
+| `layouts/header.vue` | `LHeader` | Existing layout component |
+| `partials/landing/hero.vue` | `PLandingHero` | Existing domain component |
 | `ui/table/index.vue` | `AppTable` | Example family root |
-| `ui/table/Header.vue` | `AppTableHeader` | Example tightly coupled part |
+| `ui/table/header.vue` | `AppTableHeader` | Example tightly coupled part |
 | `ui/table/cell/index.vue` | `AppTableCell` | Example nested family root |
-| `ui/table/cell/Action.vue` | `AppTableCellAction` | Example nested part |
+| `ui/table/cell/action.vue` | `AppTableCellAction` | Example nested part |
 | `partials/landing/work-experience/index.vue` | `PLandingWorkExperience` | Example preserving current parent name |
-| `partials/landing/work-experience/Item.vue` | `PLandingWorkExperienceItem` | Example parent-owned child |
+| `partials/landing/work-experience/item.vue` | `PLandingWorkExperienceItem` | Example parent-owned child |
 | `partials/guest/table/index.vue` | `PGuestTable` | Example domain family root |
-| `partials/guest/table/EmptyState.vue` | `PGuestTableEmptyState` | Example domain-owned part |
+| `partials/guest/table/empty-state.vue` | `PGuestTableEmptyState` | Example domain-owned part |
 
 ### Checklist for creating or moving components
 
@@ -72,6 +74,7 @@ Use **general → specific** naming: registered prefix → domain → component 
 4. Keep related files discoverable together; justify additional nesting by actual ownership/grouping value.
 5. Inspect `nuxt.config.ts`, current usages, explicit imports, and existing generated declarations in `.nuxt/components.d.ts` when available. Generated declarations may be stale and do not prove a hypothetical path resolves correctly. If generation/runtime verification is needed, follow the existing user-authorization rules; never edit generated declarations.
 6. For an authorized move, update every affected template, import, and other component-name reference. Do not mass rename/refactor existing components as part of an instruction-only task.
+7. Use a temporary filename for case-only renames on case-insensitive filesystems. Git with `core.ignorecase=true` can hide those moves: inspect with `rtk proxy git -c core.ignorecase=false status --short`; when staging is explicitly requested, record case-only moves in the index using two-step `git mv` (old tracked name → temporary name → lowercase destination), even if the filesystem name has already changed. Do not change persistent Git configuration or stage changes merely to expose a rename. Compare resolved names before/after, including acronyms: `faq.vue` resolves to `PLandingFaq`, not `PLandingFAQ`. Update references for any changed resolved name without changing behavior.
 
 ## Implementation boundaries
 

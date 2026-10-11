@@ -15,7 +15,7 @@ Inspected on 2026-10-11. This is a source-code snapshot, not a claim about the l
 | Contact/profile/availability | `app/app.config.ts` | Hero and footer; footer social links are also used in Hero |
 | Theme | `app/assets/css/main.css`, `app/app.config.ts` | Tailwind/Nuxt UI imports, semantic tokens, slot defaults, font families |
 | Animation | `app/constants/index.ts` | `MOTION_OPTIONS`; some Hero/experience animations are local |
-| OG image | `app/components/OgImage/PortfolioDracula.takumi.vue` | Page-level `defineOgImage("PortfolioDracula", props)` |
+| OG image | `app/components/OgImage/portfolio-dracula.takumi.vue` | Page-level `defineOgImage("PortfolioDracula", props)` |
 | Error view | `app/error.vue` | Own header/footer, `UError`, and toaster |
 | Clipboard | `app/utils/clipboard.ts` | Browser clipboard and success toast; requires client interaction |
 
@@ -24,6 +24,7 @@ The current routes are Home, About, and Body Project. There is no implemented bl
 ## Nuxt and content conventions
 
 - Components are registered from `app/components/ui` (`App`), `layouts` (`L`), `partials` (`P`), and `OgImage` (`OgImage`) in `nuxt.config.ts`. Nested names produce components such as `PLandingWorkExperience`.
+- Project-owned files and folders use lowercase kebab-case; resolved component names remain PascalCase. The OG directory `OgImage`, renderer suffixes, and standardized framework/tooling/instruction filenames are exceptions. `landing/faq.vue` resolves to `PLandingFaq`. Composable filenames use `use-body-program.ts`, with exports such as `useBodyProgram`; no custom composables currently exist.
 - Vue files use `<script setup lang="ts">`. Content consumers use generated `IndexCollectionItem` types where applicable.
 - Both pages use awaited `useAsyncData`, `queryCollection(...).first()`, and a fatal 404 if the collection result is missing.
 - `useSeoMeta` reads the page's `seo` fields with existing title/description fallbacks. Keep that contract when adjusting copy or schema.
@@ -45,7 +46,7 @@ The current routes are Home, About, and Body Project. There is no implemented bl
 ## Personal Body Project
 
 - `app/pages/body.vue` loads the `body` data collection from `content/body.yml` using awaited `useAsyncData`; a missing result produces a fatal 404. Duplicate IDs, invalid session/core references, or empty sessions produce a fatal 500 instead of silently omitting workouts. The schema is in `shared/body-schema.ts`.
-- `app/layouts/body.vue` uses the existing container, colors, and fonts without the portfolio navbar/footer. Domain components live in `partials/body`, with `session/{index,Exercise}.vue` resolving to `PBodySession` and `PBodySessionExercise`.
+- `app/layouts/body.vue` uses the existing container, colors, and fonts without the portfolio navbar/footer. Domain components live in `partials/body`, with `session/{index,exercise}.vue` resolving to `PBodySession` and `PBodySessionExercise`.
 - The initial view is summary → weekly schedule → session tabs. The first YAML session is selected initially; there is no automatic day selection. Schedule buttons select associated sessions or reveal rest/optional-day details.
 - Sessions reference core groups by `coreId`, with `coreOptional` controlling the optional label. Exercise dose/equipment/notes/alternatives are content, not inferred prescriptions.
 - Guidance uses accordions. Separate print-only rendering includes all sessions and guidance, independent of selected tabs and closed accordions. Print styles are scoped to the Body layout.
