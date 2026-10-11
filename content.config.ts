@@ -1,4 +1,5 @@
 import { defineCollection, defineContentConfig, z } from "@nuxt/content";
+import { bodySchema } from "./shared/body-schema";
 
 function createBaseSchema() {
   return z.object({
@@ -54,6 +55,11 @@ function createSeoSchema() {
 
 export default defineContentConfig({
   collections: {
+    body: defineCollection({
+      type: "data",
+      source: "body.yml",
+      schema: bodySchema,
+    }),
     // Index/Landing Page
     index: defineCollection({
       type: "page",

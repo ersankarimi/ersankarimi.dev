@@ -17,9 +17,9 @@
 
 ## Repository entry points
 
-- App shell: `app/app.vue`; current layout: `app/layouts/default.vue`.
-- Current routes: `app/pages/index.vue` (`/`) and `app/pages/about.vue` (`/about`). Navigation lives in `app/utils/links.ts`.
-- Content: `content/index.yml`, `content/about.yml`; collections and schemas: `content.config.ts`.
+- App shell: `app/app.vue`; portfolio layout: `app/layouts/default.vue`; personal workout layout: `app/layouts/body.vue`.
+- Current routes: Home (`/`), About (`/about`), and personal Body Project (`/body`). Navigation lives in `app/utils/links.ts`; `/body` intentionally stays out of it.
+- Content: `content/index.yml`, `content/about.yml`, `content/body.yml`; collections: `content.config.ts`; workout schema: `shared/body-schema.ts`.
 - Shared UI/contact configuration: `app/app.config.ts`; design tokens and fonts: `app/assets/css/main.css`.
 - Component registration in `nuxt.config.ts`: `App` for UI, `L` for layouts, `P` for partials, `OgImage` for OG templates. Nuxt UI components use `U`.
 - Read the project skill at [.agents/skills/ersankarimi-dev/SKILL.md](.agents/skills/ersankarimi-dev/SKILL.md) for implementation or review; load only the references needed for the task.
@@ -82,9 +82,12 @@ Use **general → specific** naming: registered prefix → domain → component 
 - Treat edits to global CSS, `app.config.ts`, the shared layout, motion constants, or SEO configuration as changes affecting both current pages. Check their consumers without broadening the task into unrelated cleanup.
 - Never edit generated `.nuxt`, `.output`, `.data`, or dependency files as the fix. Do not expose local environment values in output or tracked documentation.
 
-## Current state versus future decisions
+## Personal Body Project
 
-The Body Project link currently points to GitHub Pages from About. Its future centralization decisions are recorded in the skill's architecture reference. They are not implemented and do not authorize migration during unrelated work.
+- `/body` uses a dedicated layout and the website's existing Nuxt UI design system, not the old standalone HTML styling. Its About link is internal; it is public without login, has `noindex, nofollow`, and is excluded from sitemap/navigation/homepage.
+- `content/body.yml` is the single active program. Keep IDs/references valid, preserve YAML order, and make program changes in content rather than hardcoding doses, counts, days, or phases in components.
+- Keep session-associated core and alternatives, plus full-program printing independent of selected tabs/closed guidance. No tracker, persistence, archive UI, or editor is implemented.
+- Do not edit the original Body Project repository as part of website maintenance. Changes to the workout prescriptions require a content request, not merely a UI task.
 
 ## Code Review Rules
 

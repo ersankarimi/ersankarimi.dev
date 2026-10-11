@@ -19,7 +19,7 @@ Inspected on 2026-10-11. This is a source-code snapshot, not a claim about the l
 | Error view | `app/error.vue` | Own header/footer, `UError`, and toaster |
 | Clipboard | `app/utils/clipboard.ts` | Browser clipboard and success toast; requires client interaction |
 
-The current application has no implemented blog route, Experience route, Body route, backend API, authentication, or workout persistence. Do not infer these features from the README, content descriptions, or commented code.
+The current routes are Home, About, and Body Project. There is no implemented blog route, Experience route, backend API, authentication, or workout persistence. Do not infer these features from the README, content descriptions, or commented code.
 
 ## Nuxt and content conventions
 
@@ -42,13 +42,15 @@ The current application has no implemented blog route, Experience route, Body ro
 - Motion uses opacity, scaling, and blur. Avoid copying animated effects into unrelated components merely for consistency.
 - Assets currently include `/profile.jpg`, `/favicon.svg`, and company logos in `public/`; Nuxt Image uses IPX.
 
-## Approved future Body Project direction
+## Personal Body Project
 
-Confirmed by the user on 2026-10-11; **not implemented in this repository**:
+- `app/pages/body.vue` loads the `body` data collection from `content/body.yml` using awaited `useAsyncData`; a missing result produces a fatal 404. Duplicate IDs, invalid session/core references, or empty sessions produce a fatal 500 instead of silently omitting workouts. The schema is in `shared/body-schema.ts`.
+- `app/layouts/body.vue` uses the existing container, colors, and fonts without the portfolio navbar/footer. Domain components live in `partials/body`, with `session/{index,Exercise}.vue` resolving to `PBodySession` and `PBodySessionExercise`.
+- The initial view is summary → weekly schedule → session tabs. The first YAML session is selected initially; there is no automatic day selection. Schedule buttons select associated sessions or reveal rest/optional-day details.
+- Sessions reference core groups by `coreId`, with `coreOptional` controlling the optional label. Exercise dose/equipment/notes/alternatives are content, not inferred prescriptions.
+- Guidance uses accordions. Separate print-only rendering includes all sessions and guidance, independent of selected tabs and closed accordions. Print styles are scoped to the Body layout.
+- The existing About link points to `/body`. The route is absent from homepage/navbar, publicly accessible without login, uses `noindex, nofollow`, and is excluded from sitemap. It is explicitly included in Nitro prerender routes for static output. These controls do not provide access control.
+- One active program is displayed; edit YAML and publish through the existing deployment workflow. IDs must be unique within each list and references valid; array order controls display. Older versions remain in Git, not an archive UI. README contains editing examples.
+- There is no website editor, workout input/storage, or synchronization. Preserve source workout doses, equipment, safety guidance, and references during UI changes.
 
-- Centralize the user's personal Body Project at `/body` in this website; it is for the user's own use.
-- Keep it out of the portfolio navbar and homepage. Update the existing About reference to the internal destination when migration is requested.
-- Retain the existing Body Project design with a dedicated layout, rather than inheriting the portfolio navbar/layout.
-- Keep the page publicly accessible without login, add `noindex`, and exclude it from the sitemap. Hidden navigation and indexing controls do not provide access control.
-
-These decisions describe a future task. Do not create `/body`, change its current external About link, edit the source Body Project repository, or change SEO settings merely because this reference exists. Inspect its current source and confirm remaining implementation choices when the user requests migration.
+The original `ersan-bodyproject` repository is source material for the migration and remains untouched by website maintenance.

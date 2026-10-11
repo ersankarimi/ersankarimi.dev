@@ -74,6 +74,49 @@ pnpm typecheck  # Type-check
 
 ## Content Structure
 
+### Personal Body Project
+
+The personal workout program is available at `/body`, linked from About but
+excluded from the main navigation and sitemap. It is public without login;
+`noindex, nofollow` reduces search discovery and is not access control.
+
+Edit **`content/body.yml`** to change the active program. It is the single source
+for the schedule, sessions, exercise doses, core, guidance, progression, recovery,
+and references. No component edits are needed for ordinary program updates.
+
+```yaml
+# Inside a sessions entry:
+id: upper-a
+title: Upper A
+focus: Dada, bahu, dan triceps.
+duration: Maks. 40 menit
+coreId: core-a
+coreOptional: false
+notes: []
+exercises:
+  - name: Push Up
+    url: https://fitbod.me/exercises/push-up
+    dose: 3 set × 8–15 repetisi
+    equipment: Berat badan
+    notes: []
+```
+
+- Keep IDs unique within each list. `schedule.sessionId` must match a session ID;
+  `sessions.coreId` must match a core group ID. Omit these fields when not applicable.
+- Array order determines display order. Add/remove sessions, exercises, and
+  progression phases as needed; update the summary and related guidance too.
+- Doses, durations, and equipment are text, including time-based or per-side
+  exercises. Keep `notes: []` for entries without notes.
+- Add an optional `alternative` object with `name`, `url`, `dose`, `equipment`,
+  and `when` to an exercise when it has a replacement.
+- Quote text containing `: `, or use YAML multiline blocks. The collection schema
+  is defined in `shared/body-schema.ts`.
+- Publish changes through the existing website deployment workflow. Only the
+  current program is displayed; older versions remain in Git history.
+
+There is no website editor or workout storage. The **Cetak** action prints the
+entire program, including all sessions and guidance regardless of the active tab.
+
 Most of the site content lives under `content/`.
 
 Example structure:

@@ -9,7 +9,7 @@ Read the repository's root `AGENTS.md` first. This skill supports the existing w
 
 ## Choose the relevant reference
 
-- For page, content, component, layout, styling, or routing work, read [references/architecture.md](references/architecture.md). Its final section separates approved future Body Project decisions from implemented behavior.
+- For page, content, component, layout, styling, or routing work, read [references/architecture.md](references/architecture.md). Its final section describes the implemented personal Body Project and editing workflow.
 - For checks, tooling, dependency alignment, CI, SEO, OG images, or debugging, read [references/validation.md](references/validation.md).
 - For a focused copy edit, read the relevant content file and its consumer; do not load all references automatically.
 
