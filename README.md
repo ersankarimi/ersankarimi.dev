@@ -1,6 +1,6 @@
 # ersankarimi.dev
 
-Personal website and portfolio of **Ersan Karimi** — a Front-End Developer based in **Balikpapan, Indonesia**.
+Personal website and portfolio of **Ersan Karimi**, a Front-End Developer based in **Balikpapan, Indonesia**.
 
 Built with **Nuxt 4**, **Nuxt UI**, **Nuxt Content**, and **Nuxt SEO**.
 
@@ -104,7 +104,7 @@ You can set OG image per page using:
 defineOgImageComponent("PortfolioDracula.takumi", {
   name: "Ersan Karimi",
   role: "Front-End Developer",
-  tagline: "I build clean, responsive web UI and enjoy refining the details—clarity, consistency, and ease of use.",
+  tagline: "I build clean, responsive web UI and enjoy refining the details clarity, consistency, and ease of use.",
   location: "Balikpapan, Indonesia",
   website: "ersankarimi.dev",
   photo: "https://avatars.githubusercontent.com/u/73420137?v=4",
