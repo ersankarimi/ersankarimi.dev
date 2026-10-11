@@ -69,7 +69,7 @@ defineOgImage("PortfolioDracula", {
         delay: 0.4,
       }"
     >
-      <PLandingFAQ :page="page" />
+      <PLandingFaq :page="page" />
     </Motion>
   </UPage>
 </template>

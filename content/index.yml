@@ -4,7 +4,7 @@ seo:
   ogDescription: "I'm Ersan Karimi, a front-end developer specializing in building fast, polished web experiences. Based in Balikpapan, Indonesia."
 
 title: "Hey, I'm Ersan Karimi Front-End Developer"
-description: "I build web experiences that feel fast, polished, and easy to use. Based in Balikpapan, Indonesia — open to front-end roles and collaborations."
+description: "I build web experiences that feel fast, polished, and easy to use. Based in Balikpapan, Indonesia   open to front-end roles and collaborations."
 
 # About
 about:
@@ -12,7 +12,7 @@ about:
   description: |
     I'm Ersan Karimi, a front-end developer with ~3 years of professional experience. I build responsive, user-friendly web experiences with a focus on clarity, performance, and clean UI.
 
-    I've worked with software teams delivering client projects, and I'm also building Anggun Praya—turning ideas into a polished product with a consistent user experience.
+    I've worked with software teams delivering client projects, and I'm also building Anggun Praya turning ideas into a polished product with a consistent user experience.
 
   links:
     - label: More About Me
@@ -34,13 +34,13 @@ faq:
       questions:
         - label: What services do you offer?
           content: |
-            I help teams and clients build and improve web experiences—landing pages, marketing sites, and web app interfaces. I can work end-to-end (plan → build → QA) or support an existing team.
+            I help teams and clients build and improve web experiences landing pages, marketing sites, and web app interfaces. I can work end-to-end (plan → build → QA) or support an existing team.
         - label: What is your process like?
           content: |
             I start by aligning on goals and scope, then break work into clear milestones. I share progress early, iterate quickly from feedback, and focus on shipping a polished, reliable result.
         - label: What kind of projects do you usually work on?
           content: |
-            Mostly dashboards, admin tools, and marketing websites—turning requirements into clean, responsive screens that feel consistent and easy to use.
+            Mostly dashboards, admin tools, and marketing websites turning requirements into clean, responsive screens that feel consistent and easy to use.
         - label: Do you work with startups or small teams?
           content: |
             Yes. I'm comfortable working with lean teams and fast-moving environments, especially when ownership and clear communication matter.
@@ -58,10 +58,10 @@ faq:
       questions:
         - label: What technologies do you usually use?
           content: |
-            I'm comfortable with modern front-end workflows—TypeScript, component-driven UI, and utility-first styling. I also adapt quickly to existing stacks depending on the project.
+            I'm comfortable with modern front-end workflows TypeScript, component-driven UI, and utility-first styling. I also adapt quickly to existing stacks depending on the project.
         - label: Can you improve performance and polish an existing UI?
           content: |
-            Yes. I can help with UI cleanup, responsive fixes, component refactors, and performance improvements—especially on pages that feel slow or inconsistent.
+            Yes. I can help with UI cleanup, responsive fixes, component refactors, and performance improvements especially on pages that feel slow or inconsistent.
         - label: Do you use component libraries?
           content: |
             Yes when it makes sense. I like practical UI building blocks, while keeping the look consistent with your product and brand.
@@ -91,7 +91,7 @@ faq:
             I share updates regularly via chat and short check-ins, and I keep tasks tracked so priorities and status are always clear.
         - label: What makes your work style different?
           content: |
-            I care about the details users feel—clarity, consistency, and speed. I aim to ship clean UI that's easy to maintain and ready for real-world use.
+            I care about the details users feel clarity, consistency, and speed. I aim to ship clean UI that's easy to maintain and ready for real-world use.
         - label: Are you open to remote work?
           content: |
             Yes. I'm open to remote roles and flexible collaboration setups.
@@ -99,14 +99,14 @@ faq:
 # Work Experience (Accordion / LinkedIn-style)
 experience:
   title: Work Experience
-  description: "A quick timeline of what I've been working on—client projects, product building, and continuous improvements."
+  description: "A quick timeline of what I've been working on client projects, product building, and continuous improvements."
   items:
     - slug: anggunpraya
       label: Anggun Praya
-      headline: Founder & Developer · Oct 2024 — Present
+      headline: Founder & Developer · Oct 2024   Present
       subheadline: Service/Product · Remote (Balikpapan)
       role: Founder & Developer
-      period: Oct 2024 — Present
+      period: Oct 2024   Present
       locationType: Remote
       employmentType: Self-Employed
       company:
@@ -118,13 +118,13 @@ experience:
         color-dark: "#f59e0b"
         type: Service/Product
       summary: |
-        A digital wedding invitation brand I'm building for Indonesian couples—focused on elegant, modern, and easy-to-use invitations that couples can customize and share with their guests.
+        A digital wedding invitation brand I'm building for Indonesian couples focused on elegant, modern, and easy-to-use invitations that couples can customize and share with their guests.
       roles:
         - title: Building Anggun Praya
-          period: Oct 2024 — Present
+          period: Oct 2024   Present
           meta: Remote · Balikpapan
           description: |
-            I'm building Anggun Praya step by step—turning ideas into a clean, consistent product experience. I'm hands-on across product direction, UI implementation, and improving the quality as the product grows.
+            I'm building Anggun Praya step by step turning ideas into a clean, consistent product experience. I'm hands-on across product direction, UI implementation, and improving the quality as the product grows.
           highlights:
             - Build the website and invitation template experience
             - Improve UX details (clarity, sections, responsiveness, UI states)
@@ -140,10 +140,10 @@ experience:
 
     - slug: elemesgroup
       label: Elemes Group
-      headline: Front-End Developer · Jun 2023 — Present
+      headline: Front-End Developer · Jun 2023   Present
       subheadline: Software Development · Remote & On-site (Tangerang Selatan)
       role: Front-End Developer
-      period: Jun 2023 — Present
+      period: Jun 2023   Present
       locationType: Remote & On-site
       employmentType: Part-time, Contract, Internship
       company:
@@ -159,7 +159,7 @@ experience:
         I focus on building clean, responsive UI, shipping features reliably, and improving product quality through iterations.
       roles:
         - title: Front-End Developer (Part-time)
-          period: Feb 2025 — Present
+          period: Feb 2025   Present
           meta: Remote
           description: |
             Supporting ongoing client projects by maintaining web apps and shipping selected improvements.
@@ -170,7 +170,7 @@ experience:
             - Strengthen consistency (UI states, edge cases, responsiveness)
 
         - title: Front-End Developer (Contract)
-          period: Nov 2023 — Feb 2025
+          period: Nov 2023   Feb 2025
           meta: On-site · Tangerang Selatan
           description: |
             Worked on multiple client-facing web apps, taking features from design handoff to release.
@@ -181,7 +181,7 @@ experience:
             - Collaborate with QA/PM/backend to deliver reliably
 
         - title: Front-End Developer (Internship)
-          period: Jun 2023 — Nov 2023
+          period: Jun 2023   Nov 2023
           meta: On-site · Tangerang Selatan
           description: |
             My starting point in a real production environment.

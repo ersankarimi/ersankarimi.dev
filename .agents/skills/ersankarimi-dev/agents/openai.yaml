@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ersankarimi.dev"
+  short_description: "Maintain Ersan's Nuxt personal website"
+  default_prompt: "Use $ersankarimi-dev to work on this website using its existing architecture and project rules."

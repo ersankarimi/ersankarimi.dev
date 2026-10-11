@@ -17,7 +17,7 @@ withDefaults(
     name: "Ersan Karimi",
     role: "Front-End Developer",
     tagline:
-      "I build clean, responsive web interfaces and ship improvements with care—one step at a time.",
+      "I build clean, responsive web interfaces and ship improvements with care one step at a time.",
     location: "Balikpapan, Indonesia",
     website: "ersankarimi.dev",
     photo: "https://avatars.githubusercontent.com/u/73420137?v=4",

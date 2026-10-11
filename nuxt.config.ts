@@ -106,7 +106,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ["/"],
+      routes: ["/", "/body"],
       crawlLinks: true,
     },
   },
@@ -135,6 +135,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     enabled: true,
+    exclude: ["/body"],
   },
 
   seo: {

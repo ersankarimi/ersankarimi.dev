@@ -1,0 +1,349 @@
+# Program aktif. Edit isi dan urutan array; tidak perlu mengubah component.
+# schedule.sessionId -> sessions.id; sessions.coreId -> core.id.
+title: Program Workout Rumahan 12 Minggu
+description: >-
+  Program latihan yang memprioritaskan otot tubuh bagian atas dan core,
+  sambil tetap melatih kaki agar seimbang. Semua dapat dilakukan di rumah
+  dengan dua dumbbell 5 kg, lantai atau matras, dan kursi biasa yang kokoh.
+summary:
+  - 12 minggu
+  - 4 sesi utama per minggu
+  - 4 gerakan per sesi
+  - Maks. 40 menit per sesi
+  - 2 dumbbell · 5 kg
+equipment:
+  - Dua dumbbell, masing-masing 5 kg.
+  - Lantai atau matras.
+  - Kursi biasa yang kokoh untuk duduk atau berpegangan.
+  - Tidak ada gerakan yang memerlukan bench.
+
+schedule:
+  - id: senin
+    day: Senin
+    activity: Upper A + core
+    description: Dada, bahu, dan triceps; lanjut Core A.
+    duration: Maks. 40 menit
+    sessionId: upper-a
+  - id: selasa
+    day: Selasa
+    activity: Lower
+    description: Kaki dan betis.
+    duration: 25–35 menit
+    sessionId: lower
+  - id: rabu
+    day: Rabu
+    activity: Istirahat
+    description: Biarkan tubuh pulih.
+    duration: Hari istirahat
+  - id: kamis
+    day: Kamis
+    activity: Upper B
+    description: Punggung dan biceps; core opsional.
+    duration: Maks. 40 menit
+    sessionId: upper-b
+  - id: jumat
+    day: Jumat
+    activity: Pemulihan ringan
+    description: Jalan santai atau mobilitas ringan.
+    duration: Opsional
+  - id: sabtu
+    day: Sabtu
+    activity: Upper C + core
+    description: Dada, punggung, bahu, dan biceps; lanjut Core B.
+    duration: Maks. 40 menit
+    sessionId: upper-c
+  - id: minggu
+    day: Minggu
+    activity: Olahraga / lari
+    description: Basket atau voli; lari santai bila tidak bermain dan tubuh pulih.
+    duration: Opsional
+
+sessionGuidance:
+  - >-
+    Jumlah set di bawah adalah target minggu 3–11. Penyesuaian untuk minggu
+    1–2 dan 12 ada di bagian progresi. Setiap sesi utama selesai dalam maksimal
+    40 menit, termasuk pemanasan dan latihan perut tambahan.
+  - >-
+    Klik nama gerakan untuk panduan Fitbod. Untuk gerakan dumbbell, 5 kg
+    berarti 5 kg per tangan saat memakai keduanya; satu dumbbell boleh
+    digunakan pada gerakan yang memang memerlukannya.
+
+sessions:
+  - id: upper-a
+    title: Upper A
+    focus: Dada, bahu, dan triceps.
+    duration: Maks. 40 menit
+    coreId: core-a
+    coreOptional: false
+    notes:
+      - Sesudahnya, lakukan Core A. Jaga siku dan punggung tetap terkendali; hentikan gerakan yang menimbulkan nyeri bahu atau siku.
+    exercises:
+      - name: Push Up
+        url: https://fitbod.me/exercises/push-up
+        dose: 3 set × 8–15 repetisi
+        equipment: Berat badan
+        notes: []
+      - name: Dumbbell Floor Press
+        url: https://fitbod.me/exercises/dumbbell-floor-press
+        dose: 2 set × 12–20 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes:
+          - Berbaring di lantai.
+      - name: Dumbbell Shoulder Press
+        url: https://fitbod.me/exercises/dumbbell-shoulder-press
+        dose: 2 set × 8–15 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes:
+          - Boleh duduk di kursi biasa yang kokoh tanpa sandaran miring.
+      - name: Seated Tricep Press
+        url: https://fitbod.me/exercises/seated-tricep-press
+        dose: 2 set × 10–18 repetisi
+        equipment: Satu dumbbell · 5 kg
+        notes:
+          - Duduk tegak dan pegang satu dumbbell dengan kedua tangan.
+
+  - id: lower
+    title: Lower
+    focus: Paha, hamstring, glutes, dan betis dengan porsi lebih kecil daripada latihan upper.
+    duration: 25–35 menit
+    coreOptional: false
+    notes: []
+    exercises:
+      - name: Dumbbell Goblet Squat
+        url: https://fitbod.me/exercises/dumbbell-goblet-squat
+        dose: 2 set × 12–20 repetisi
+        equipment: Satu dumbbell · 5 kg
+        notes:
+          - Pegang dumbbell di depan dada.
+      - name: Dumbbell Romanian Deadlift
+        url: https://fitbod.me/exercises/dumbbell-romanian-deadlift
+        dose: 2 set × 12–20 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes:
+          - Dorong pinggul ke belakang dan jaga punggung netral.
+      - name: Reverse Lunge
+        url: https://fitbod.me/exercises/reverse-lunge
+        dose: 2 set × 8–12 repetisi/kaki
+        equipment: Berat badan; dumbbell bila teknik stabil
+        notes:
+          - Mulai tanpa beban; pegang dumbbell bila teknik sudah stabil.
+      - name: Single Leg Standing Calf Raise
+        url: https://fitbod.me/exercises/single-leg-standing-calf-raise
+        dose: 2 set × 15–25 repetisi/kaki
+        equipment: Kursi untuk keseimbangan
+        notes:
+          - Pegang kursi untuk keseimbangan.
+
+  - id: upper-b
+    title: Upper B
+    focus: Punggung, bagian belakang bahu, dan biceps.
+    duration: Maks. 40 menit
+    coreId: core-optional
+    coreOptional: true
+    notes:
+      - Jika tubuh sudah pulih dan waktu masih cukup, lakukan Core opsional.
+      - Jangan memaksakan dua variasi curl dengan mengayun badan.
+    exercises:
+      - name: Dumbbell Bent Over Row
+        url: https://fitbod.me/exercises/dumbbell-bent-over-row
+        dose: 3 set × 12–20 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes:
+          - Tekuk pinggul, tahan punggung netral, dan tarik siku ke belakang tanpa mengayun badan.
+      - name: Dumbbell Bent Over Reverse Fly
+        url: https://fitbod.me/exercises/dumbbell-bent-over-reverse-fly
+        dose: 2 set × 8–15 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes: []
+        alternative:
+          name: Prone T's
+          url: https://fitbod.me/exercises/prone-t-s
+          dose: 2 set × 12–20 repetisi
+          equipment: Tanpa beban
+          when: Jika 5 kg per tangan terlalu berat untuk mencapai 8 repetisi rapi, ganti slot ini dengan Prone T's.
+      - name: Dumbbell Bicep Curl
+        url: https://fitbod.me/exercises/dumbbell-bicep-curl
+        dose: 2 set × 10–20 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes: []
+      - name: Hammer Curls
+        url: https://fitbod.me/exercises/hammer-curls
+        dose: 2 set × 10–20 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes: []
+
+  - id: upper-c
+    title: Upper C
+    focus: Pengulangan pola dorong dan tarik, bahu samping, serta lengan.
+    duration: Maks. 40 menit
+    coreId: core-b
+    coreOptional: false
+    notes:
+      - Sesudahnya, lakukan Core B.
+      - Latihan pengganti pada slot ke-3 tetap dihitung sebagai satu gerakan utama, bukan gerakan kelima.
+    exercises:
+      - name: Push Up
+        url: https://fitbod.me/exercises/push-up
+        dose: 2 set × 8–20 repetisi
+        equipment: Berat badan
+        notes: []
+      - name: Dumbbell Bent Over Row
+        url: https://fitbod.me/exercises/dumbbell-bent-over-row
+        dose: 3 set × 12–20 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes:
+          - Tekuk pinggul, tahan punggung netral, dan tarik siku ke belakang tanpa mengayun badan.
+      - name: Dumbbell Lateral Raise
+        url: https://fitbod.me/exercises/dumbbell-lateral-raise
+        dose: 2 set × 8–15 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes: []
+        alternative:
+          name: Prone T's
+          url: https://fitbod.me/exercises/prone-t-s
+          dose: 2 set × 12–20 repetisi
+          equipment: Tanpa beban
+          when: Jika 5 kg per tangan terlalu berat untuk mencapai 8 repetisi rapi, ganti slot ini dengan Prone T's.
+      - name: Biceps Curl to Shoulder Press
+        url: https://fitbod.me/exercises/biceps-curl-to-shoulder-press
+        dose: 2 set × 8–15 repetisi
+        equipment: Dua dumbbell · 5 kg per tangan
+        notes:
+          - Bergerak perlahan dari curl ke press; berhenti jika badan harus mengayun untuk mengangkat beban.
+
+core:
+  - id: core-a
+    title: Core A
+    description: Lakukan setelah sesi utama. Batasi finisher sekitar 5–8 menit.
+    exercises:
+      - name: Reverse Crunch
+        url: https://fitbod.me/exercises/reverse-crunch
+        dose: 2 set × 10–15 repetisi
+        equipment: Lantai atau matras
+        notes: []
+      - name: Scissor Kick
+        url: https://fitbod.me/exercises/scissor-kick
+        dose: 2 set × 20 tendangan bergantian total
+        equipment: Lantai atau matras
+        notes:
+          - Jaga punggung bawah tetap nyaman di lantai; kurangi rentang gerak atau hentikan bila pinggang terasa nyeri.
+  - id: core-optional
+    title: Core opsional
+    description: Lakukan bila tubuh sudah pulih dan waktu masih cukup; bukan tambahan set tanpa batas.
+    exercises:
+      - name: Dead Bug
+        url: https://fitbod.me/exercises/dead-bug
+        dose: 2 set × 8–10 repetisi/sisi
+        equipment: Lantai atau matras
+        notes: []
+  - id: core-b
+    title: Core B
+    description: Lakukan setelah sesi utama. Batasi finisher sekitar 5–8 menit.
+    exercises:
+      - name: Leg Raise
+        url: https://fitbod.me/exercises/leg-raise
+        dose: 2 set × 8–15 repetisi
+        equipment: Lantai atau matras
+        notes:
+          - Jaga punggung bawah tetap nyaman di lantai; kurangi rentang gerak atau hentikan bila pinggang terasa nyeri.
+      - name: Plank
+        url: https://fitbod.me/exercises/plank
+        dose: 2 set × 30–45 detik
+        equipment: Lantai atau matras
+        notes: []
+
+guides:
+  - id: pelaksanaan
+    title: Cara menjalankan sesi
+    paragraphs: []
+    steps:
+      - "Pemanasan 4–5 menit: jalan di tempat 60 detik, bodyweight squat 10 kali, hip hinge tanpa beban 10 kali, dan arm circle 10 putaran setiap arah."
+      - Lakukan gerakan utama sesuai urutan. Istirahat 45–75 detik antarset; selesaikan kedua sisi pada gerakan satu kaki sebelum menghitung satu set.
+      - Berhenti saat masih mampu sekitar 2 repetisi tambahan dengan teknik rapi. Jika bentuk gerakan berubah, akhiri set lebih awal.
+      - Lakukan finisher core sesuai jadwal. Batasi sekitar 5–8 menit agar seluruh sesi tetap di bawah 40 menit.
+  - id: penyesuaian-jadwal
+    title: Saat jadwal olahraga berubah
+    paragraphs:
+      - >-
+        Bila bermain bola berat pada hari Selasa atau dalam 24 jam sebelumnya,
+        pindahkan sesi lower ke Jumat. Jika Jumat juga dipakai bermain, tetap
+        latihan Selasa tetapi cukup 1 set per gerakan kaki. Jangan menambah
+        sesi berat untuk menggantinya.
+    steps: []
+  - id: finisher-core
+    title: Tentang finisher core
+    paragraphs:
+      - Finisher ini merupakan adaptasi, bukan salinan persis, dari rangkaian tendangan kaki yang biasa dilakukan. Semua gerakannya bisa dicari di Fitbod.
+      - Istirahat 20–40 detik antarset core. Lakukan setelah sesi utama, bukan sebagai tambahan set tanpa batas.
+      - Latihan core memperkuat otot perut, tetapi tidak dapat menjamin six-pack terlihat hanya dengan melatih area perut.
+    steps: []
+
+progression:
+  title: Progresi 12 Minggu
+  phases:
+    - id: adaptasi
+      label: Minggu 1–2
+      title: Adaptasi
+      description: Mulai dengan 2 set untuk gerakan utama yang tertulis 3 set. Gerakan yang tertulis 2 set tetap 2 set. Core cukup 1 set per gerakan. Sisakan sekitar 3 repetisi.
+    - id: bangun-volume
+      label: Minggu 3–4
+      title: Bangun volume
+      description: Ikuti set dan repetisi pada jadwal. Sisakan sekitar 2–3 repetisi.
+    - id: tambah-tantangan
+      label: Minggu 5–8
+      title: Tambah tantangan
+      description: Tambah 1–2 repetisi per set sampai batas atas. Bila sudah tercapai dengan teknik rapi, turunkan beban selama 3 detik.
+    - id: fase-kuat
+      label: Minggu 9–11
+      title: Fase kuat
+      description: Pertahankan jumlah set; kejar batas atas rentang repetisi dengan sisa 1–2 repetisi pada set terakhir.
+    - id: deload
+      label: Minggu 12
+      title: Deload
+      description: "Deload: 1–2 set per gerakan utama dan 1 set per gerakan core, dengan sekitar 60–70% repetisi biasanya."
+  notes:
+    - Catat jumlah repetisi dan kualitas teknik.
+    - >-
+      Jika suatu gerakan sudah terasa ringan pada batas repetisi tertinggi
+      meski dilakukan perlahan, dua dumbbell 5 kg mungkin membatasi pertumbuhan
+      otot berikutnya. Dumbbell yang bebannya dapat diatur atau resistance band
+      bisa menjadi peningkatan alat di masa depan.
+    - >-
+      Gerakan menarik vertikal untuk punggung juga baru dapat ditambahkan bila
+      kelak ada alat yang sesuai; jangan menggantung pada kursi atau furnitur
+      yang tidak dirancang menahan berat badan.
+
+recovery:
+  - title: Istirahat dan pemulihan ringan
+    description: Rabu tetap hari istirahat. Jumat opsional untuk jalan santai atau gerakkan sendi dengan nyaman.
+  - title: Olahraga atau lari santai
+    description: >-
+      Basket atau voli 1–2 kali seminggu sudah menjadi aktivitas kardio.
+      Lari Minggu tidak wajib; jika tidak bermain bola dan tubuh terasa pulih,
+      lakukan lari santai 20–30 menit dengan kecepatan yang masih memungkinkan berbicara.
+  - title: Prioritaskan pemulihan
+    description: Jadwal bermain bola dapat jatuh pada hari lain. Bila kaki masih lelah, prioritaskan pemulihan daripada menambah lari.
+
+logging:
+  description: "Catat latihanmu di tempat yang biasa kamu gunakan. Informasi yang dapat dicatat setiap sesi:"
+  fields:
+    - Tanggal
+    - Hari/sesi
+    - Gerakan
+    - Set × repetisi
+    - Sisa repetisi
+    - Catatan teknik
+  notes:
+    - Evaluasi kemajuan pada akhir minggu 4, 8, dan 12. Naikkan tantangan hanya ketika repetisi bertambah dengan teknik rapi dan tubuh pulih dengan baik.
+
+safety:
+  - Hentikan latihan bila muncul nyeri tajam, pusing, sesak yang tidak wajar, atau keluhan yang memburuk.
+  - Program ini adalah panduan kebugaran umum yang dapat disesuaikan dengan arahan tenaga kesehatan.
+
+references:
+  - title: Fitbod Exercise Guides and Videos
+    url: https://fitbod.me/exercises
+    description: Panduan gerakan yang ditautkan pada setiap latihan.
+  - title: Ringkasan ACSM tentang latihan resistensi
+    url: https://www.acsm.org/wp-content/uploads/2026/03/Resistance-Training-Position-Stand-infographic.pdf
+    description: Konsistensi, latihan semua kelompok otot utama, dan latihan rumahan.
